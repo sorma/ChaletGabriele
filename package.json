@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint ."
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview"
   },
   "dependencies": {
     "next": "16.2.4",
@@ -14,7 +14,9 @@
     "react-dom": "19.2.5"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.19.1",
     "eslint": "^9.39.4",
-    "eslint-config-next": "^16.2.4"
+    "eslint-config-next": "^16.2.4",
+    "wrangler": "^4.83.0"
   }
 }

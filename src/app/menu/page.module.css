@@ -1,0 +1,151 @@
+.page { padding-bottom: clamp(4rem, 8vw, 7rem); }
+
+.eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-accent);
+  margin: 0 0 0.9rem;
+}
+
+.opening {
+  padding: clamp(4rem, 9vw, 8rem) 0 clamp(2rem, 4vw, 3rem);
+  border-bottom: 1px solid var(--color-border);
+}
+.openingInner { max-width: 700px; }
+.openingTitle {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 10vw, 9rem);
+  font-weight: 600;
+  line-height: 0.88;
+  letter-spacing: -0.05em;
+  color: var(--color-text);
+  margin: 0 0 1.5rem;
+}
+.openingLead {
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  max-width: 54ch;
+  margin: 0 0 0.7rem;
+}
+.openingNote { font-size: 0.85rem; color: var(--color-text-faint); margin: 0; }
+.openingPhone { color: var(--color-accent); font-weight: 700; text-decoration: none; transition: color 200ms ease; }
+.openingPhone:hover { color: var(--color-text); }
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3.5vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  margin: 0 0 0.7rem;
+}
+.sectionSub { font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.7; max-width: 60ch; margin: 0 0 1.8rem; }
+.alaCartaSection { padding: clamp(3.5rem, 7vw, 6rem) 0; }
+.fissiSection { padding: clamp(3.5rem, 7vw, 6rem) 0; background: var(--color-surface); }
+.selfSection { padding: clamp(3.5rem, 7vw, 6rem) 0; }
+
+/* ══ MENU BOX ══ */
+.menuBox {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-md);
+}
+
+/* ══ TAB NAV — occupa tutta la card ══ */
+.tabNav {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.2rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 24px 24px 0 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tabNav::-webkit-scrollbar { display: none; }
+
+.tabBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;   /* ← testo centrato */
+  flex: 1;                   /* ← ogni tab si espande */
+  min-width: max-content;    /* ← evita che il testo vada a capo */
+  height: 30px;
+  padding: 0 0.65rem;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: var(--color-text-muted);
+  font-size: 0.73rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+.tabBtn:hover { color: var(--color-text); background: var(--color-surface-offset); }
+.tabBtnActive {
+  color: var(--color-accent);
+  background: color-mix(in oklch, var(--color-accent) 10%, transparent);
+  border-color: color-mix(in oklch, var(--color-accent) 30%, transparent);
+}
+.tabPanel { padding: 1.6rem 1.8rem 1.8rem; }
+.panelNota { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--color-accent); opacity: 0.75; margin: 0 0 1.1rem; }
+
+/* ══ PIATTI ══ */
+.piattoList { display: flex; flex-direction: column; }
+.piattoRow { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.8rem 0; border-bottom: 1px solid var(--color-divider); }
+.piattoRow:last-child { border-bottom: none; }
+.piattoSpecial { background: linear-gradient(90deg, color-mix(in oklch, var(--color-accent) 8%, transparent), transparent 70%); margin: 0 -0.5rem; padding-inline: 0.5rem; border-radius: 10px; }
+.piattoInfo { flex: 1; min-width: 0; }
+.piattoNome { font-size: 0.9rem; font-weight: 600; color: var(--color-text); margin: 0 0 0.12rem; line-height: 1.4; }
+.piattoSpecial .piattoNome { color: var(--color-accent); }
+.piattoDesc { font-size: 0.78rem; color: var(--color-text-muted); line-height: 1.55; margin: 0; }
+.piattoNote { font-size: 0.70rem; color: var(--color-text-faint); font-style: italic; margin: 0.1rem 0 0; }
+.prezzoArea { display: flex; flex-direction: column; align-items: flex-end; gap: 0.15rem; flex-shrink: 0; }
+.piattoPrezzo { font-family: var(--font-display); font-size: 0.88rem; font-weight: 600; color: var(--color-accent); white-space: nowrap; }
+
+/* ══ MENU FISSI ══ */
+.fissiGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.menuCard { display: flex; flex-direction: column; padding: 1.8rem; background: #2d1f14; border-radius: 24px; box-shadow: var(--shadow-lg); transition: transform 260ms ease, box-shadow 260ms ease; }
+.menuCard:hover { transform: translateY(-3px); box-shadow: 0 20px 48px rgba(0,0,0,0.4); }
+.menuCardTop { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; padding-bottom: 1.4rem; margin-bottom: 1.4rem; border-bottom: 1px solid rgba(255,248,242,0.10); }
+.menuCardNome { font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; color: #fff8f2; margin: 0; letter-spacing: -0.02em; line-height: 1.15; }
+.menuCardPrezzo { font-family: var(--font-display); font-size: 1.8rem; font-weight: 600; color: rgba(232,207,152,0.95); margin: 0; white-space: nowrap; letter-spacing: -0.03em; }
+.menuCardPortate { flex: 1; display: flex; flex-direction: column; gap: 1.2rem; margin-bottom: 1.6rem; }
+.portataLabel { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: rgba(232,207,152,0.70); margin: 0 0 0.4rem; }
+.portataVoci { display: flex; flex-direction: column; gap: 0.18rem; }
+.portataVoce { font-size: 0.86rem; color: rgba(255,248,242,0.65); line-height: 1.5; margin: 0; padding-left: 1rem; position: relative; }
+.portataVoce::before { content: '–'; position: absolute; left: 0; color: rgba(232,207,152,0.40); }
+.menuCardIncluso { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 1.6rem; }
+.inclusoBadge { font-size: 0.70rem; color: rgba(232,207,152,0.55); background: rgba(255,248,242,0.06); border: 1px solid rgba(255,248,242,0.09); border-radius: 999px; padding: 0.22rem 0.65rem; }
+.menuCardBtn { display: inline-flex; align-items: center; justify-content: center; height: 46px; padding: 0 1.4rem; border-radius: 999px; background: rgba(255,248,242,0.10); border: 1px solid rgba(255,248,242,0.20); color: #fff8f2; font-weight: 700; font-size: 0.85rem; text-decoration: none; margin-top: auto; transition: background 220ms ease; }
+.menuCardBtn:hover { background: rgba(255,248,242,0.18); }
+
+/* ══ CTA ══ */
+.cta { padding: clamp(3.5rem, 7vw, 5.5rem) 0; background: var(--color-surface); }
+.ctaInner { display: grid; grid-template-columns: 1fr auto; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+.ctaTitle { font-family: var(--font-display); font-size: clamp(1.9rem, 3.5vw, 3.2rem); font-weight: 600; line-height: 1.0; letter-spacing: -0.03em; color: var(--color-text); margin: 0 0 0.7rem; }
+.ctaPara { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.75; max-width: 52ch; margin: 0; }
+.ctaActions { display: flex; flex-direction: column; gap: 0.7rem; flex-shrink: 0; }
+.ctaBtn { display: inline-flex; align-items: center; justify-content: center; height: 50px; padding: 0 1.8rem; border-radius: 999px; background: linear-gradient(135deg, var(--color-accent-soft, #b8924a), var(--color-accent, #9a7535)); color: #fff; font-weight: 700; font-size: 0.9rem; text-decoration: none; white-space: nowrap; transition: transform 220ms ease, box-shadow 220ms ease; }
+.ctaBtn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(154,117,53,0.35); }
+.ctaBtnGhost { display: inline-flex; align-items: center; justify-content: center; height: 50px; padding: 0 1.8rem; border-radius: 999px; border: 1px solid var(--color-accent, #9a7535); color: var(--color-accent, #9a7535); font-weight: 600; font-size: 0.88rem; text-decoration: none; white-space: nowrap; transition: background 220ms ease, color 220ms ease; }
+.ctaBtnGhost:hover { background: var(--color-accent, #9a7535); color: #fff; }
+
+/* ══ RESPONSIVE ══ */
+@media (max-width: 900px) {
+  .fissiGrid { grid-template-columns: 1fr; }
+  .ctaInner { grid-template-columns: 1fr; }
+  .ctaActions { flex-direction: row; flex-wrap: wrap; }
+}
+@media (max-width: 600px) {
+  .openingTitle { font-size: clamp(3.2rem, 15vw, 5rem); }
+  .tabBtn { padding: 0 0.5rem; font-size: 0.70rem; height: 28px; }
+  .tabPanel { padding: 1.2rem 1.2rem 1.4rem; }
+  .ctaActions { flex-direction: column; }
+}

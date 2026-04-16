@@ -1,0 +1,155 @@
+.siteFooter {
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+}
+
+/* ── 4 colonne, padding allineato a hero/nav/panorama ── */
+.footerTop {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: flex-start;
+  padding: clamp(3rem, 6vw, 5rem) 110px;  /* ← allineato a hero e nav */
+}
+
+/* ── Colonna Brand ── */
+.brandMark {
+  display: inline-grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-accent-soft), var(--color-accent));
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.3;
+  margin: 0 0 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.brandDesc {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  max-width: 30ch;
+  margin: 0;
+}
+
+/* ── Titoli colonne ── */
+.colTitle {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-text-faint);
+  margin: 0 0 1rem;
+}
+
+/* ── Link list ── */
+.linkList,
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footerLink {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.footerLink:hover {
+  color: var(--color-accent);
+}
+
+.address {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Bottom bar ── */
+.footerBottom {
+  border-top: 1px solid var(--color-border);
+}
+
+.footerBottomInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.4rem 110px;  /* ← allineato a hero e nav */
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: var(--color-text-faint);
+  margin: 0;
+}
+
+.footerLegal {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.legalLink {
+  font-size: 0.8rem;
+  color: var(--color-text-faint);
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.legalLink:hover {
+  color: var(--color-accent);
+}
+
+/* ── Responsive — identico a hero / nav / panorama ── */
+@media (max-width: 1200px) {
+  .footerTop {
+    padding: clamp(3rem, 5vw, 4rem) 64px;
+  }
+  .footerBottomInner {
+    padding-inline: 64px;
+  }
+}
+
+@media (max-width: 900px) {
+  .footerTop {
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem 24px;
+  }
+  .footerBottomInner {
+    padding-inline: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .footerTop {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 14px;
+  }
+  .footerBottomInner {
+    padding-inline: 14px;
+  }
+  .footerLegal {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

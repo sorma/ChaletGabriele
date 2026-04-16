@@ -1,0 +1,308 @@
+.page { padding-bottom: clamp(4rem, 8vw, 7rem); }
+
+/* ── EYEBROW ── */
+.eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-accent);
+  margin: 0 0 0.9rem;
+}
+
+/* ── HERO ── */
+.heroSection {
+  padding: clamp(4rem, 9vw, 8rem) 0 clamp(2rem, 4vw, 3rem);
+  border-bottom: 1px solid var(--color-border);
+}
+.heroInner { max-width: 700px; }
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 10vw, 9rem);
+  font-weight: 600;
+  line-height: 0.88;
+  letter-spacing: -0.05em;
+  color: var(--color-text);
+  margin: 0 0 1.5rem;
+}
+.heroLead {
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  max-width: 54ch;
+  margin: 0 0 0.7rem;
+}
+.heroNote { font-size: 0.85rem; color: var(--color-text-faint); margin: 0; }
+.heroPhone {
+  color: var(--color-accent);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+.heroPhone:hover { color: var(--color-text); }
+
+/* ── INFO GRID (3 card) ── */
+.infoSection { padding: clamp(3rem, 6vw, 5rem) 0; }
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 1.8rem;
+  justify-content: space-between;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+  transition: transform 240ms ease, box-shadow 240ms ease;
+}
+.infoCard:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.infoCardDark {
+  background: #2d1f14;
+  border-color: transparent;
+  box-shadow: var(--shadow-lg);
+}
+.infoLabel {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-text-faint);
+  margin: 0 0 0.3rem;
+}
+.infoCardDark .infoLabel { color: rgba(232, 207, 152, 0.55); }
+.infoValue {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0 0 0.3rem;
+}
+.infoCardDark .infoValue { color: #fff8f2; }
+.infoNote {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+.infoCardDark .infoNote { color: rgba(255, 248, 242, 0.48); }
+
+/* ── TABELLA ORARI ── */
+.orariTable {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 0.4rem;
+}
+.orariRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.42rem 0;
+  border-bottom: 1px solid var(--color-divider);
+}
+.orariRow:last-child { border-bottom: none; }
+.orariRowChiuso .orariGiorno { opacity: 0.35; }
+.orariGiorno {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+.orariStato {
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-align: right;
+}
+.orariStato__aperto      { color: var(--color-accent); }
+.orariStato__solopranzo  { color: var(--color-text-muted); }
+.orariStato__chiuso      { color: var(--color-text-faint); }
+
+/* ── COME ARRIVARE ── */
+.arrivoSection {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+.arrivoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+.arrivoTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3.5vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  margin: 0 0 1.1rem;
+}
+.arrivoPara {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  margin: 0 0 0.9rem;
+}
+.arrivoStats {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  margin-top: 1.8rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--color-divider);
+}
+.arrivoStat { display: flex; flex-direction: column; gap: 0.18rem; }
+.arrivoStatLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-text-faint);
+}
+.arrivoStatValue {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  letter-spacing: -0.02em;
+}
+.arrivoStatDivider {
+  width: 1px;
+  height: 2rem;
+  background: var(--color-divider);
+  flex-shrink: 0;
+}
+.mapWrapper {
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4 / 3;
+}
+.mapFrame { width: 100%; height: 100%; border: none; display: block; }
+
+/* ── INFO PRATICHE ── */
+.infoSection2 { padding: clamp(3rem, 6vw, 5rem) 0; }
+.infoSection2Title {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3.5vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  margin: 0 0 1.8rem;
+}
+.infoSection2Grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+.infoSection2Card {
+  padding: 1.6rem 1.8rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-md);
+}
+.infoSection2CardTitolo {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+  margin: 0 0 0.6rem;
+}
+.infoSection2CardTesto {
+  font-size: 0.87rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ── CTA ── */
+.ctaSection {
+  padding: clamp(3.5rem, 7vw, 5.5rem) 0;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+.ctaInner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+}
+.ctaTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3.5vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  margin: 0 0 0.7rem;
+}
+.ctaPara {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  max-width: 52ch;
+  margin: 0;
+}
+.ctaActions { display: flex; flex-direction: column; gap: 0.7rem; flex-shrink: 0; }
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0 1.8rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--color-accent-soft, #b8924a), var(--color-accent, #9a7535));
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+.ctaBtn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(154, 117, 53, 0.35); }
+.ctaBtnGhost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0 1.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-accent, #9a7535);
+  color: var(--color-accent, #9a7535);
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 220ms ease, color 220ms ease;
+}
+.ctaBtnGhost:hover { background: var(--color-accent, #9a7535); color: #fff; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .infoGrid { grid-template-columns: 1fr; }
+.arrivoGrid { grid-template-columns: 1fr; }
+  .infoSection2Grid { grid-template-columns: 1fr; }
+  .ctaInner { grid-template-columns: 1fr; }
+  .ctaActions { flex-direction: row; flex-wrap: wrap; }
+}
+@media (max-width: 600px) {
+  .heroTitle { font-size: clamp(3.2rem, 15vw, 5rem); }
+  .arrivoStats { flex-wrap: wrap; gap: 1rem; }
+  .arrivoStatDivider { display: none; }
+  .ctaActions { flex-direction: column; }
+}

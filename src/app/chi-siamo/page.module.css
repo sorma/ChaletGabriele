@@ -1,0 +1,409 @@
+.page {
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+/* ── Eyebrow ── */
+.eyebrow {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-accent);
+  margin: 0 0 1rem;
+}
+
+/* ═══════════════════════════════
+   APERTURA EDITORIALE
+═══════════════════════════════ */
+.opening {
+  padding: clamp(4rem, 9vw, 8rem) 0 clamp(2rem, 4vw, 3rem);
+}
+
+.openingInner {
+  max-width: 820px;
+}
+
+.openingTitle {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  font-weight: 600;
+  line-height: 0.93;
+  letter-spacing: -0.04em;
+  color: var(--color-text);
+  margin: 0 0 1.8rem;
+}
+
+.openingLead {
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  max-width: 58ch;
+  margin: 0;
+}
+
+/* ═══════════════════════════════
+   STORIA — Fondatori
+═══════════════════════════════ */
+.story {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+  background: var(--color-surface);
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.storyImage {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 3 / 2;
+}
+
+.storyImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 600ms ease;
+  filter: sepia(12%) contrast(1.04);
+}
+
+.storyImage:hover .storyImg {
+  transform: scale(1.03);
+}
+
+.storyImageCaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.8rem 1.2rem;
+  background: linear-gradient(to top, rgba(20, 14, 6, 0.72), transparent);
+  font-size: 0.78rem;
+  color: rgba(255, 243, 220, 0.85);
+  font-style: italic;
+  letter-spacing: 0.04em;
+}
+
+.storyTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 600;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  margin: 0 0 1.5rem;
+}
+
+.storyPara {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--color-text-muted);
+  max-width: 54ch;
+  margin: 0 0 1.1rem;
+}
+
+/* ═══════════════════════════════
+   CITAZIONE
+═══════════════════════════════ */
+.quote {
+  padding: clamp(3.5rem, 7vw, 6rem) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.quoteBlock {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.quoteText {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin: 0 0 1.2rem;
+  max-width: 22ch;
+  margin-inline: auto;
+}
+
+.quoteCite {
+  font-size: 0.82rem;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-accent);
+}
+
+/* ═══════════════════════════════
+   IL TÓC
+═══════════════════════════════ */
+.toc {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+}
+
+.tocGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.tocTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 600;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  margin: 0 0 1.5rem;
+}
+
+.tocPara {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--color-text-muted);
+  max-width: 54ch;
+  margin: 0 0 1.1rem;
+}
+
+.tocAccompagnamento {
+  margin-top: 1.8rem;
+  padding: 1.4rem 1.6rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+}
+
+.tocAccLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-text-faint);
+  margin: 0 0 0.8rem;
+}
+
+.tocAccList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.tocAccList li {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.tocAccList li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.tocImageWrap {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 3 / 2;
+}
+
+.tocImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 600ms ease;
+}
+
+.tocImageWrap:hover .tocImg {
+  transform: scale(1.03);
+}
+
+/* rimuovi .tocBadge { ... } e aggiungi: */
+
+.tocNote {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--color-text-faint);
+  letter-spacing: 0.02em;
+}
+
+.tocNoteDot {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  opacity: 0.7;
+}
+
+/* ═══════════════════════════════
+   IDENTITÀ — 3 pilastri
+═══════════════════════════════ */
+.identity {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+  background: var(--color-surface);
+}
+
+.identityTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  margin: 0 0 2.5rem;
+  max-width: 24ch;
+}
+
+.identityGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.identityCard {
+  padding: 2.2rem 1.8rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 260ms ease, box-shadow 260ms ease;
+}
+
+.identityCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.identityNumber {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: rgba(154, 117, 53, 0.20);
+  line-height: 1;
+  margin: 0 0 1rem;
+  letter-spacing: -0.04em;
+}
+
+.identityCard h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 0.8rem;
+  letter-spacing: -0.02em;
+}
+
+.identityCard p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ═══════════════════════════════
+   CHIUSURA NARRATIVA
+═══════════════════════════════ */
+.closing {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+}
+
+.closingInner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.closingTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 600;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  margin: 0 0 1.5rem;
+}
+
+.closingPara {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--color-text-muted);
+  max-width: 52ch;
+  margin: 0 0 1rem;
+}
+
+.closingImage {
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4 / 3;
+}
+
+.closingImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 600ms ease;
+}
+
+.closingImage:hover .closingImg {
+  transform: scale(1.03);
+}
+
+/* ═══════════════════════════════
+   RESPONSIVE
+═══════════════════════════════ */
+@media (max-width: 900px) {
+  .storyGrid,
+  .tocGrid,
+  .closingInner {
+    grid-template-columns: 1fr;
+  }
+
+  .identityGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .openingTitle,
+  .storyTitle,
+  .tocTitle,
+  .closingTitle {
+    font-size: clamp(2.2rem, 10vw, 3.5rem);
+  }
+
+  .quoteText {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+  }
+}

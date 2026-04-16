@@ -1,0 +1,550 @@
+/* ═══════════════════════════════
+   HERO — card arrotondata come Sormani
+═══════════════════════════════ */
+.heroSection {
+  width: 100%;
+  padding: 2.5rem 110px 0;
+}
+
+.heroShell {
+  position: relative;
+  min-height: 78vh;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 34px;
+  box-shadow: 0 24px 56px rgba(62, 48, 39, 0.18);
+}
+
+.heroBackground {
+  position: absolute;
+  inset: 0;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+  display: block;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(30, 20, 10, 0.80) 0%,
+      rgba(30, 20, 10, 0.48) 40%,
+      rgba(30, 20, 10, 0.18) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.08) 0%,
+      rgba(0, 0, 0, 0.30) 100%
+    );
+}
+
+.heroInner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 0 56px 64px;
+}
+
+.heroContent {
+  max-width: 720px;
+}
+
+.heroEyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(232, 207, 152, 0.90);
+  margin: 0 0 1.4rem;
+  padding: 0.45rem 1rem;
+  border: 1px solid rgba(201, 165, 90, 0.35);
+  border-radius: 999px;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  font-weight: 600;
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+  color: #fff8f2;
+  margin: 0 0 1.4rem;
+}
+
+.heroText {
+  font-size: 1.1rem;
+  color: rgba(255, 248, 242, 0.88);
+  max-width: 580px;
+  line-height: 1.8;
+  margin: 0 0 1.8rem;
+}
+
+.heroButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.primaryButton {
+  min-height: 52px;
+  padding: 0 1.8rem;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.92rem;
+  background: #fff8f2;
+  color: #2f241d;
+  box-shadow: 0 16px 30px rgba(24, 18, 14, 0.16);
+  transition: transform 220ms ease, background 220ms ease;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  background: #f1e6da;
+}
+
+.secondaryButton {
+  min-height: 52px;
+  padding: 0 1.8rem;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  background: rgba(255, 248, 242, 0.08);
+  color: #fff8f2;
+  border: 1px solid rgba(255, 248, 242, 0.32);
+  backdrop-filter: blur(8px);
+  transition: transform 220ms ease, background 220ms ease;
+}
+
+.secondaryButton:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 248, 242, 0.15);
+}
+
+/* ═══════════════════════════════
+   EYEBROW GLOBALE
+═══════════════════════════════ */
+.eyebrow {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-accent);
+  margin: 0 0 1rem;
+}
+
+.eyebrowLight {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(201, 165, 90, 0.85);
+  margin: 0 0 1rem;
+}
+
+/* ═══════════════════════════════
+   INTRO EDITORIALE
+═══════════════════════════════ */
+.intro {
+  padding: clamp(5rem, 10vw, 9rem) 0;
+}
+
+.introGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.introTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 600;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  margin: 0 0 1.5rem;
+}
+
+.introPara {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  max-width: 52ch;
+  margin: 0 0 1rem;
+}
+
+.btnOutline {
+  display: inline-flex;
+  align-items: center;
+  height: 46px;
+  padding: 0 1.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background 240ms ease, color 240ms ease;
+}
+
+.btnOutline:hover {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.introImage {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.introImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 600ms ease;
+}
+
+.introImage:hover .introImg {
+  transform: scale(1.03);
+}
+
+/* ═══════════════════════════════
+   SIGNATURE — PIATTO FORTE
+═══════════════════════════════ */
+.signature {
+  padding: clamp(4rem, 8vw, 8rem) 0;
+  background: var(--color-surface);
+}
+
+.signatureGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.signatureImage {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  order: 1;
+}
+
+.signatureText {
+  order: 2;
+}
+
+.signatureImg {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+  transition: transform 600ms ease;
+}
+
+.signatureImage:hover .signatureImg {
+  transform: scale(1.03);
+}
+
+.signatureTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 600;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  margin: 0 0 1.5rem;
+}
+
+.signaturePara {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  max-width: 52ch;
+  margin: 0 0 1rem;
+}
+
+/* ═══════════════════════════════
+   FACTS / NUMERI
+═══════════════════════════════ */
+.facts {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.factsGrid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.factItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+  min-width: 140px;
+}
+
+.factItem strong {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 600;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.factItem span {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-faint);
+  font-weight: 600;
+}
+
+.factDivider {
+  width: 1px;
+  height: 60px;
+  background: var(--color-border);
+  flex-shrink: 0;
+}
+
+/* ═══════════════════════════════
+   PANORAMA — card arrotondata come hero
+═══════════════════════════════ */
+.panorama {
+  padding: 0 110px;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.panoramaMedia {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.panoramaShell {
+  position: relative;
+  min-height: 60vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border-radius: 34px;
+  box-shadow: 0 24px 56px rgba(62, 48, 39, 0.18);
+}
+
+.panoramaBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+}
+
+.panoramaOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(30, 20, 10, 0.82) 0%,
+    rgba(30, 20, 10, 0.48) 40%,
+    rgba(30, 20, 10, 0.18) 100%
+  );
+}
+
+.panoramaContent {
+  position: relative;
+  z-index: 1;
+  padding: clamp(3.5rem, 6vw, 5rem) 56px;
+  max-width: 640px;
+}
+
+.panoramaTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: #fff;
+  margin: 0 0 1.2rem;
+}
+
+.panoramaSub {
+  font-size: 1.05rem;
+  color: rgba(255, 243, 220, 0.78);
+  line-height: 1.7;
+  margin: 0 0 2rem;
+  max-width: 44ch;
+}
+
+@media (max-width: 1200px) {
+  .panorama { padding: 0 64px; }
+}
+
+@media (max-width: 900px) {
+  .panorama { padding: 0 24px; }
+  .panoramaShell {
+    min-height: 52vh;
+    border-radius: 24px;
+  }
+  .panoramaContent { padding: 3rem 28px; }
+}
+
+@media (max-width: 600px) {
+  .panorama { padding: 0 14px; }
+  .panoramaShell {
+    min-height: 48vh;
+    border-radius: 18px;
+  }
+  .panoramaContent { padding: 2.5rem 20px; }
+}
+
+/* ═══════════════════════════════
+   INFO PRATICHE
+═══════════════════════════════ */
+.info {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.infoCard {
+  padding: 2.2rem 2rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-md);
+  transition: transform 260ms ease, box-shadow 260ms ease;
+}
+
+.infoCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.infoIcon {
+  font-size: 1.8rem;
+  margin: 0 0 1rem;
+}
+
+.infoLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-text-faint);
+  margin: 0 0 0.5rem;
+}
+
+.infoValue {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.infoPhone {
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 220ms ease;
+}
+
+.infoPhone:hover {
+  color: var(--color-text);
+}
+
+/* ═══════════════════════════════
+   RESPONSIVE
+═══════════════════════════════ */
+@media (max-width: 1200px) {
+  .heroSection {
+    padding: 2.5rem 64px 0;
+  }
+  .heroShell {
+    min-height: 72vh;
+  }
+  .heroInner {
+    padding: 0 42px 48px;
+  }
+}
+
+@media (max-width: 900px) {
+  .heroSection {
+    padding: 2rem 24px 0;
+  }
+  .heroShell {
+    min-height: 66vh;
+    border-radius: 24px;
+  }
+  .heroInner {
+    padding: 0 24px 32px;
+  }
+  .introGrid,
+  .signatureGrid {
+    grid-template-columns: 1fr;
+  }
+  .signatureImage { order: 1; }
+  .signatureText  { order: 2; }
+  .factsGrid {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .factDivider { display: none; }
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroSection {
+    padding: 1.5rem 14px 0;
+  }
+  .heroShell {
+    min-height: 60vh;
+    border-radius: 18px;
+  }
+  .heroTitle {
+    font-size: clamp(2.8rem, 12vw, 4.5rem);
+  }
+  .heroButtons {
+    flex-direction: column;
+  }
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+}

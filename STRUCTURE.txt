@@ -1,0 +1,31 @@
+Project: polentoteca-chalet-gabriele-v4
+
+Pages with dedicated CSS:
+- src/app/page.js
+- src/app/page.module.css
+- src/app/chi-siamo/page.js
+- src/app/chi-siamo/page.module.css
+- src/app/webcam/page.js
+- src/app/webcam/page.module.css
+- src/app/video-di-presentazione/page.js
+- src/app/video-di-presentazione/page.module.css
+- src/app/fondatori/page.js
+- src/app/fondatori/page.module.css
+- src/app/news/page.js
+- src/app/news/page.module.css
+- src/app/galleria-fotografica/page.js
+- src/app/galleria-fotografica/page.module.css
+- src/app/contatti/page.js
+- src/app/contatti/page.module.css
+- src/app/privacy-policy/page.js
+- src/app/privacy-policy/page.module.css
+- src/app/termini-e-condizioni/page.js
+- src/app/termini-e-condizioni/page.module.css
+
+Components with dedicated CSS:
+- src/components/header/Header.js
+- src/components/header/Header.module.css
+- src/components/nav/Nav.js
+- src/components/nav/Nav.module.css
+- src/components/footer/Footer.js
+- src/components/footer/Footer.module.css

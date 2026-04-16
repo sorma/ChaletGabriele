@@ -1,0 +1,280 @@
+/* ═══════════════════════════════════════════════
+   NEWS — page.module.css
+   Polentoteca Chalet Gabriele
+═══════════════════════════════════════════════ */
+
+.page {
+  padding: clamp(4rem, 9vw, 7rem) 0;
+}
+
+/* ─────────────────────────────────────────
+   HERO
+───────────────────────────────────────── */
+.hero {
+  margin-bottom: 1.5rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top left, rgba(193, 157, 90, 0.12), transparent 32%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 80%),
+    var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.1;
+  max-width: 16ch;
+  margin-bottom: 0.75rem;
+}
+
+.lead {
+  max-width: 58ch;
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* ─────────────────────────────────────────
+   LAYOUT
+───────────────────────────────────────── */
+.layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 1.25rem;
+  align-items: stretch; /* Obbliga le colonne a essere alte uguali */
+}
+
+/* ─────────────────────────────────────────
+   COLONNA PRINCIPALE
+───────────────────────────────────────── */
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.emptyState {
+  flex: 1; /* Occupa tutta l'altezza di .main */
+  padding: 1.5rem 1.75rem;
+  border-radius: 24px;
+  border: 1px dashed var(--color-border);
+  background: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.emptyIcon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(193, 157, 90, 0.10);
+  color: rgba(193, 157, 90, 0.85);
+  margin-bottom: 0.85rem;
+}
+
+.emptyTitle {
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  max-width: 28ch;
+}
+
+.emptyText {
+  color: var(--color-text-muted);
+  font-size: 0.91rem;
+  line-height: 1.65;
+  max-width: 52ch;
+  margin-bottom: 1rem;
+}
+
+.emptyBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--color-surface);
+  background: rgba(193, 157, 90, 0.90);
+  transition: background 0.2s ease, transform 0.2s ease;
+  margin-top: auto;
+}
+
+.emptyBtn:hover {
+  background: rgba(193, 157, 90, 1);
+  transform: translateY(-1px);
+}
+
+/* ─────────────────────────────────────────
+   ARTICLE CARD — template pronto
+───────────────────────────────────────── */
+.articleCard {
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  border-radius: 24px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.articleCard:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.articleMeta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.85rem;
+}
+
+.articleTag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(193, 157, 90, 0.95);
+  background: rgba(193, 157, 90, 0.12);
+  border: 1px solid rgba(193, 157, 90, 0.22);
+}
+
+.articleDate {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+.articleTitle {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  line-height: 1.25;
+  margin-bottom: 0.6rem;
+}
+
+.articleExcerpt {
+  font-size: 0.93rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  max-width: 60ch;
+  margin-bottom: 1.1rem;
+}
+
+.articleLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(193, 157, 90, 0.90);
+  text-decoration: none;
+  transition: gap 0.2s ease;
+}
+
+.articleLink:hover {
+  gap: 8px;
+}
+
+/* ─────────────────────────────────────────
+   SIDEBAR
+───────────────────────────────────────── */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.sideCard,
+.sideCardAlt {
+  flex: 1; /* Le due card si dividono l'altezza disponibile */
+  padding: 1.25rem 1.5rem;
+  border-radius: 24px;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.sideCard {
+  background: linear-gradient(
+    160deg,
+    rgba(193, 157, 90, 0.10),
+    var(--color-surface) 60%
+  );
+}
+
+.sideCardAlt {
+  background: var(--color-surface);
+}
+
+.sideTitle {
+  font-size: 1.05rem;
+  line-height: 1.3;
+  margin: 0.4rem 0 0.5rem;
+}
+
+.sideText {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin-bottom: 0.9rem;
+  max-width: 100%;
+  flex: 1; /* Spinge il link in basso */
+}
+
+.sideLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(193, 157, 90, 0.90);
+  text-decoration: none;
+  transition: gap 0.2s ease;
+  margin-top: auto;
+}
+
+.sideLink:hover {
+  gap: 8px;
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .emptyState,
+  .sideCard,
+  .sideCardAlt {
+    flex: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero {
+    border-radius: 20px;
+  }
+
+  .emptyState,
+  .articleCard,
+  .sideCard,
+  .sideCardAlt {
+    border-radius: 18px;
+  }
+}

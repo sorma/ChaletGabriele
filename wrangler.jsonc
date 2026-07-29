@@ -21,5 +21,12 @@
   },
   "observability": {
     "enabled": true
-  }
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "chalet-menu",
+      "database_id": "00060599-61f3-454d-ae30-56c825b6cdab"
+    }
+  ]
 }

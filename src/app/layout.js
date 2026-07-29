@@ -11,8 +11,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="it">
-      <body>
+    <html lang="it" data-scroll-behavior="smooth" suppressHydrationWarning>
+      <body suppressHydrationWarning>
         {/* Curtain scuro — solo al primo accesso della sessione */}
         <PageTransition />
 

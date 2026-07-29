@@ -1,26 +1,22 @@
 // Server Component — nessun 'use client'
-// I dati vengono letti da Cloudflare D1 tramite l'API route /api/menu.
+// I dati vengono letti direttamente da Cloudflare D1 (nessuna fetch HTTP interna).
 
 import Link from 'next/link';
 import styles from './page.module.css';
 import { MenuAlaCartaClient, MenuSelfClient } from './MenuClient';
+import { getCloudflareContext } from '@opennextjs/cloudflare';
+import { getMenuFromDB } from '@/lib/db-menu';
 export const dynamic = 'force-dynamic';
 
 /**
- * Carica il menu dal database via API route interna.
- * In dev viene chiamata in modo assoluto; in produzione
- * l'URL viene costruito dall'header Host della request.
+ * Carica il menu direttamente dal binding D1.
+ * Funziona sia in locale (via wrangler dev proxy) sia su Cloudflare Workers.
+ * Elimina la dipendenza da fetch HTTP interna che non funziona su Workers.
  */
 async function getMenu() {
   try {
-    // Next.js 13+ supporta fetch() nei Server Components con cache controllata.
-    // revalidate: 0 → sempre fresh (il menu può cambiare spesso).
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/api/menu`,
-      { cache: 'no-store' }
-    );
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    return await res.json();
+    const { env } = await getCloudflareContext({ async: true });
+    return await getMenuFromDB(env.DB);
   } catch (err) {
     console.error('[menu/page] Impossibile caricare il menu dal DB:', err);
     // Ritorna strutture vuote: la pagina si renderizza senza errori

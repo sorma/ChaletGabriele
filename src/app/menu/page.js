@@ -4,6 +4,7 @@
 import Link from 'next/link';
 import styles from './page.module.css';
 import { MenuAlaCartaClient, MenuSelfClient } from './MenuClient';
+export const dynamic = 'force-dynamic';
 
 /**
  * Carica il menu dal database via API route interna.

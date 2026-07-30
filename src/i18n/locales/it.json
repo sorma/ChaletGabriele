@@ -1,0 +1,205 @@
+{
+  "nav": {
+    "home": "Home",
+    "chiSiamo": "Chi siamo",
+    "menu": "Menu",
+    "webcam": "Webcam",
+    "news": "News",
+    "contatti": "Contatti"
+  },
+  "header": {
+    "prenota": "Prenota",
+    "chiudiNumero": "Chiudi numero",
+    "mostraNumero": "Mostra numero per prenotare"
+  },
+  "layout": {
+    "vaiAlContenuto": "Vai al contenuto"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Piano Rancio · 1012 m s.l.m.",
+      "title": "Tra lago e montagne",
+      "text": "Dal 1957, cucina autentica con vista sul lago di Como e sulle Alpi. Polenta, tradizione e un panorama che toglie il fiato.",
+      "btnPrimary": "Prenota un tavolo",
+      "btnSecondary": "Scopri lo chalet"
+    },
+    "intro": {
+      "eyebrow": "La nostra storia",
+      "title": "Un luogo autentico, costruito con passione",
+      "text1": "La Polentoteca Chalet Gabriele sorge a Piano Rancio, ai piedi del monte San Primo. Costruito nel 1957 da Nuccia e Gabriele, il ristorante ha sempre avuto come obiettivo la semplicità, la qualità e la cortesia.",
+      "text2": "Due sale da pranzo con vetrate che si affacciano sul lago di Como e sulla catena delle Alpi. Un posto dove il tempo rallenta.",
+      "btn": "Chi siamo →"
+    },
+    "signature": {
+      "eyebrow": "Il piatto forte",
+      "title": "La polenta, regina della tavola",
+      "text1": "La polenta è la protagonista indiscussa del nostro menu. Preparata secondo la ricetta di famiglia, servita con sughi ricchi e sapori autentici della tradizione lombarda di montagna.",
+      "text2": "Accanto alla polenta, un menu ricco di specialità locali per soddisfare ogni palato, dalle carni ai formaggi di malga.",
+      "btn": "Sfoglia il menu →"
+    },
+    "facts": {
+      "year": "Anno di fondazione",
+      "height": "Quota sul mare",
+      "view": "Vista panoramica",
+      "distance": "Da Bellagio"
+    },
+    "panorama": {
+      "eyebrow": "Una vista unica",
+      "title": "Il lago, le Alpi, la tua tavola",
+      "text": "Dopo pranzo, passeggia tra i boschi o scendi a Bellagio per ammirare il lago.",
+      "btn": "Riserva il tuo posto — 031 963624"
+    },
+    "info": {
+      "where": "Dove siamo",
+      "whereText": "Piano Rancio, Bellagio (CO)<br />Facilmente raggiungibile, ampio parcheggio",
+      "hours": "Orari",
+      "hoursText": "Chiuso il lunedì a cena<br />e il martedì tutto il giorno",
+      "booking": "Prenotazioni"
+    }
+  },
+  "about": {
+    "opening": {
+      "eyebrow": "Chi siamo",
+      "title": "Un luogo costruito con le mani e il cuore",
+      "lead": "Non è solo un ristorante. È un posto che esiste da quasi settant'anni, costruito pietra su pietra da una famiglia di montagna, rimasto fedele a sé stesso quando tutto intorno cambiava."
+    },
+    "story": {
+      "caption": "Mariuccia e Gabriele, anni '60",
+      "eyebrow": "Le origini · 1957",
+      "title": "Gabriele e Nuccia, una storia di famiglia",
+      "p1": "Era il 1957 quando <strong>Gabriele Galli</strong>, figlio di contadini di Bellagio, decise di aprire un piccolo bar a Piano Rancio. Accanto a lui, <strong>Mariuccia Sala</strong> — per tutti Nuccia — milanese di nascita ma di montagna nell'anima.",
+      "p2": "Quello che nacque come un bar di paese si trasformò lentamente, stagione dopo stagione, in un ristorante. Non per ambizione, ma per necessità: la gente saliva fin quassù, si sedeva, chiedeva da mangiare. E Nuccia cucinava.",
+      "p3": "Il loro obiettivo era semplice e non è mai cambiato: semplicità, qualità e cortesia. Tre parole che ancora oggi guidano ogni giornata di lavoro."
+    },
+    "quote": {
+      "text": "\"La semplicità, la qualità e la cortesia. Sempre.\"",
+      "cite": "— Gabriele Galli, fondatore"
+    },
+    "toc": {
+      "eyebrow": "Il piatto simbolo",
+      "title": "Il Tóc, anima di Bellagio",
+      "p1": "Il <strong>Tóc</strong> è il piatto della tradizione bellagina per eccellenza, con oltre 150 anni di storia. Il nome viene dal dialetto comasco <em> \"Tucà\"</em> — toccare — perché si mangia così: con le mani, direttamente dal paiolo, in compagnia.",
+      "p2": "Polenta di farina di mais, burro genuino e formaggio d'alpeggio amalgamati lentamente fino a ottenere un composto cremoso e omogeneo. Una preparazione che richiede tempo, pazienza e la mano esperta di un vero <em>tocchista</em>. Se si sbaglia un passaggio, il Tóc rilascia il burro e non è più mangiabile.",
+      "p3": "Per secoli veniva preparato solo in occasione di matrimoni e battesimi. Oggi lo portiamo in tavola per gruppi su prenotazione, con il rito intatto: il paiolo di rame al centro, i cucchiai di legno, le risate tutt'intorno.",
+      "accLabel": "Si serve con",
+      "acc1": "Missoltini del Lago di Como",
+      "acc2": "Salametti e salumi nostrani",
+      "acc3": "Gallina nostrana lessata",
+      "acc4": "Ragèl — il digestivo nel paiolo",
+      "note": "Disponibile su prenotazione per gruppi di almeno 8 persone"
+    },
+    "identity": {
+      "eyebrow": "Chi siamo davvero",
+      "title": "Tre cose che non cambieranno mai",
+      "c1Title": "La famiglia",
+      "c1Text": "Siamo una famiglia che cucina per le famiglie degli altri. Dal 1957 la stessa mano, la stessa cura, lo stesso modo di stare in sala: come se ogni tavolo fosse quello di casa nostra.",
+      "c2Title": "La ricetta",
+      "c2Text": "Il Tóc non si prepara leggendo un foglio. Si impara guardando, si affina nel tempo, si porta avanti con rispetto per chi l'ha inventato. Solo un vero tocchista sa quando è pronto.",
+      "c3Title": "La compagnia",
+      "c3Text": "Qui non si mangia mai soli nel senso vero della parola. Il ristorante è sempre pieno, i tavoli vicini, le risate che si mescolano. Una domenica alla Polentoteca sa di festa anche quando non lo è."
+    },
+    "closing": {
+      "eyebrow": "Oggi",
+      "title": "Quasi settant'anni e lo stesso paiolo",
+      "p1": "Gabriele e Nuccia non ci sono più, ma lo spirito con cui hanno aperto questo posto è rimasto intatto. La cucina funziona ancora come funzionava allora: materie prime vere, ricette di territorio, nessuna scorciatoia.",
+      "p2": "Chi sale fin qui lo sa. Non si viene alla Polentoteca per caso. Si viene perché si è sentito dire che vale la salita. E ogni volta si riparte con la sensazione di aver mangiato qualcosa di vero."
+    }
+  },
+  "menu": {
+    "opening": {
+      "eyebrow": "La nostra cucina",
+      "title": "Menu",
+      "lead": "Cucina tipica di montagna, materie prime del territorio, ricette tramandate di generazione in generazione. I nostri piatti si possono asportare tutto l'anno.",
+      "note": "Pane & coperto € 2,50 · Prenotazioni solo telefonicamente: "
+    },
+    "alacarta": {
+      "eyebrow": "Alla carta",
+      "title": "I nostri piatti"
+    },
+    "fissi": {
+      "eyebrow": "Per gruppi e compagnie",
+      "title": "Menu a prezzo fisso",
+      "sub": "I tavoli alla vetrata vengono assegnati in ordine di prenotazione. Nel prezzo è escluso il vino.",
+      "btn": "Prenota — 031 963624"
+    },
+    "self": {
+      "eyebrow": "Servizio informale",
+      "title": "Menu Self Service",
+      "sub": "Ordine libero al banco. Disponibile anche da asporto."
+    },
+    "cta": {
+      "eyebrow": "Prenota il tuo tavolo",
+      "title": "Vieni a trovarci",
+      "para": "Per prenotazioni di gruppo, menu fissi e fondute contattaci direttamente per telefono. I tavoli con vista sul lago vengono assegnati in ordine di prenotazione.",
+      "btnGhost": "Contattaci →"
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contatti",
+      "title": "Vieni a trovarci",
+      "lead": "Siamo a Piano Rancio, a 1012 m s.l.m., ai piedi del Monte San Primo. Un locale caratteristico in sasso e legno, con vetrate affacciate sul Lago di Como e sulla catena delle Alpi.",
+      "note": "Prenotazioni solo telefonicamente:"
+    },
+    "cards": {
+      "phoneTitle": "Telefono",
+      "phoneNote": "Prenotazioni solo telefonicamente",
+      "hoursTitle": "Orari",
+      "hoursDays": {
+        "Lunedì": "Lunedì",
+        "Martedì": "Martedì",
+        "Mercoledì": "Mercoledì",
+        "Giovedì": "Giovedì",
+        "Venerdì": "Venerdì",
+        "Sabato": "Sabato",
+        "Domenica": "Domenica"
+      },
+      "hoursStates": {
+        "aperto": "Pranzo · Cena",
+        "solo-pranzo": "Solo pranzo",
+        "chiuso": "Chiuso"
+      },
+      "whereTitle": "Dove siamo",
+      "whereValue": "Piano Rancio",
+      "whereNote": "Bellagio (CO) · 1012 m s.l.m.<br />A 12 km da Bellagio"
+    },
+    "arrive": {
+      "eyebrow": "Come raggiungerci",
+      "title": "Tra lago e montagna",
+      "p1": "Il ristorante sorge a Piano Rancio, piccola località ai piedi del Monte San Primo. Le vetrate delle due sale si affacciano sul Lago di Como e sulla catena delle Alpi che contorna i due rami del Lario.",
+      "p2": "Facilmente raggiungibile con ogni mezzo, sia in auto attraverso la strada provinciale sia a piedi percorrendo i sentieri del bosco. A disposizione degli ospiti un ampio parcheggio gratuito.",
+      "statAlt": "Altitudine",
+      "statDist": "Da Bellagio",
+      "statPark": "Parcheggio",
+      "statParkVal": "Gratuito"
+    },
+    "rules": {
+      "eyebrow": "Prima di venire",
+      "title": "Cose utili da sapere",
+      "items": [
+        {
+          "title": "Fondute e Carbonade",
+          "text": "Richiedono prenotazione telefonica anticipata. La Chinoise e la Bourguignonne: minimo 2 ospiti. La Carbonade: minimo 6, massimo 10 ospiti."
+        },
+        {
+          "title": "Menu a prezzo fisso",
+          "text": "I menu Piano Rancio e Monte San Primo sono riservati a gruppi e compagnie e richiedono prenotazione anticipata. Nel prezzo è escluso il vino."
+        },
+        {
+          "title": "Tavoli con vista",
+          "text": "I tavoli alla vetrata con panorama sul Lago di Como vengono assegnati in ordine di prenotazione. Chiamaci in anticipo per assicurartelo."
+        },
+        {
+          "title": "Asporto tutto l'anno",
+          "text": "Tutti i piatti del menu sono disponibili anche da asporto, tutto l'anno. Contattaci telefonicamente per ordinare."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Prenota il tuo tavolo",
+      "title": "Chiamaci direttamente",
+      "para": "Le prenotazioni si effettuano esclusivamente per telefono. Per fondute, carbonade e menu fissi è obbligatoria la prenotazione anticipata. I tavoli con vista sul lago vengono assegnati in ordine di prenotazione.",
+      "btnGhost": "Vedi il menu →"
+    }
+  }
+}

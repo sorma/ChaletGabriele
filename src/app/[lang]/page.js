@@ -1,10 +1,15 @@
+import { getDictionary } from '@/i18n/dictionaries';
 import styles from './page.module.css';
 import Link from 'next/link';
 
-export default function HomePage() {
+export default async function HomePage({ params }) {
+  const lang = (await params)?.lang || 'it';
+  const dict = await getDictionary(lang);
+  
+  const localizeUrl = (path) => (path === '/' ? `/${lang}` : `/${lang}${path}`);
+
   return (
     <>
-
       {/* ── HERO ── */}
       <section className={styles.heroSection}>
         <div className={styles.heroShell}>
@@ -21,17 +26,16 @@ export default function HomePage() {
           </div>
           <div className={styles.heroInner}>
             <div className={styles.heroContent}>
-              <p className={styles.heroEyebrow}>Piano Rancio · 1012 m s.l.m.</p>
+              <p className={styles.heroEyebrow}>{dict.home.hero.eyebrow}</p>
               <h1 className={styles.heroTitle}>
-                Tra lago<br />e montagne
+                {dict.home.hero.title}
               </h1>
               <p className={styles.heroText}>
-                Dal 1957, cucina autentica con vista sul lago di Como e sulle Alpi.
-                Polenta, tradizione e un panorama che toglie il fiato.
+                {dict.home.hero.text}
               </p>
               <div className={styles.heroButtons}>
-                <a href="tel:031963624" className={styles.primaryButton}>Prenota un tavolo</a>
-                <Link href="/chi-siamo" className={styles.secondaryButton}>Scopri lo chalet</Link>
+                <a href="tel:031963624" className={styles.primaryButton}>{dict.home.hero.btnPrimary}</a>
+                <Link href={localizeUrl("/chi-siamo")} className={styles.secondaryButton}>{dict.home.hero.btnSecondary}</Link>
               </div>
             </div>
           </div>
@@ -42,18 +46,15 @@ export default function HomePage() {
       <section className={styles.intro}>
         <div className={`container ${styles.introGrid}`}>
           <div className={styles.introText}>
-            <p className={styles.eyebrow}>La nostra storia</p>
-            <h2 className={styles.introTitle}>Un luogo autentico,<br />costruito con passione</h2>
+            <p className={styles.eyebrow}>{dict.home.intro.eyebrow}</p>
+            <h2 className={styles.introTitle}>{dict.home.intro.title}</h2>
             <p className={styles.introPara}>
-              La Polentoteca Chalet Gabriele sorge a Piano Rancio, ai piedi del monte San Primo.
-              Costruito nel 1957 da Nuccia e Gabriele, il ristorante ha sempre avuto come obiettivo
-              la semplicità, la qualità e la cortesia.
+              {dict.home.intro.text1}
             </p>
             <p className={styles.introPara}>
-              Due sale da pranzo con vetrate che si affacciano sul lago di Como e sulla catena
-              delle Alpi. Un posto dove il tempo rallenta.
+              {dict.home.intro.text2}
             </p>
-            <Link href="/chi-siamo" className={styles.btnOutline}>Chi siamo →</Link>
+            <Link href={localizeUrl("/chi-siamo")} className={styles.btnOutline}>{dict.home.intro.btn}</Link>
           </div>
           <div className={styles.introImage}>
             <img
@@ -82,18 +83,15 @@ export default function HomePage() {
             />
           </div>
           <div className={styles.signatureText}>
-            <p className={styles.eyebrow}>Il piatto forte</p>
-            <h2 className={styles.signatureTitle}>La polenta,<br />regina della tavola</h2>
+            <p className={styles.eyebrow}>{dict.home.signature.eyebrow}</p>
+            <h2 className={styles.signatureTitle}>{dict.home.signature.title}</h2>
             <p className={styles.signaturePara}>
-              La polenta è la protagonista indiscussa del nostro menu. Preparata secondo
-              la ricetta di famiglia, servita con sughi ricchi e sapori autentici della
-              tradizione lombarda di montagna.
+              {dict.home.signature.text1}
             </p>
             <p className={styles.signaturePara}>
-              Accanto alla polenta, un menu ricco di specialità locali per soddisfare
-              ogni palato, dalle carni ai formaggi di malga.
+              {dict.home.signature.text2}
             </p>
-            <Link href="/contatti" className={styles.btnOutline}>Sfoglia il menu →</Link>
+            <Link href={localizeUrl("/contatti")} className={styles.btnOutline}>{dict.home.signature.btn}</Link>
           </div>
         </div>
       </section>
@@ -103,27 +101,26 @@ export default function HomePage() {
         <div className={`container ${styles.factsGrid}`}>
           <div className={styles.factItem}>
             <strong>1957</strong>
-            <span>Anno di fondazione</span>
+            <span>{dict.home.facts.year}</span>
           </div>
           <div className={styles.factDivider} />
           <div className={styles.factItem}>
             <strong>1012 m</strong>
-            <span>Quota sul mare</span>
+            <span>{dict.home.facts.height}</span>
           </div>
           <div className={styles.factDivider} />
           <div className={styles.factItem}>
             <strong>Lago di Como</strong>
-            <span>Vista panoramica</span>
+            <span>{dict.home.facts.view}</span>
           </div>
           <div className={styles.factDivider} />
           <div className={styles.factItem}>
             <strong>12 km</strong>
-            <span>Da Bellagio</span>
+            <span>{dict.home.facts.distance}</span>
           </div>
         </div>
       </section>
 
-      {/* ── VISTA PANORAMICA ── */}
       {/* ── VISTA PANORAMICA ── */}
       <section className={styles.panorama}>
         <div className={styles.panoramaShell}>
@@ -137,13 +134,13 @@ export default function HomePage() {
           />
           <div className={styles.panoramaOverlay} />
           <div className={styles.panoramaContent}>
-            <p className={styles.eyebrowLight}>Una vista unica</p>
-            <h2 className={styles.panoramaTitle}>Il lago, le Alpi,<br />la tua tavola</h2>
+            <p className={styles.eyebrowLight}>{dict.home.panorama.eyebrow}</p>
+            <h2 className={styles.panoramaTitle}>{dict.home.panorama.title}</h2>
             <p className={styles.panoramaSub}>
-              Dopo pranzo, passeggia tra i boschi o scendi a Bellagio per ammirare il lago.
+              {dict.home.panorama.text}
             </p>
             <a href="tel:031963624" className={styles.btnHero}>
-              Riserva il tuo posto — 031 963624
+              {dict.home.panorama.btn}
             </a>
           </div>
         </div>
@@ -154,17 +151,17 @@ export default function HomePage() {
         <div className={`container ${styles.infoGrid}`}>
           <div className={styles.infoCard}>
             <p className={styles.infoIcon}>📍</p>
-            <p className={styles.infoLabel}>Dove siamo</p>
-            <p className={styles.infoValue}>Piano Rancio, Bellagio (CO)<br />Facilmente raggiungibile, ampio parcheggio</p>
+            <p className={styles.infoLabel}>{dict.home.info.where}</p>
+            <p className={styles.infoValue} dangerouslySetInnerHTML={{ __html: dict.home.info.whereText }}></p>
           </div>
           <div className={styles.infoCard}>
             <p className={styles.infoIcon}>🕐</p>
-            <p className={styles.infoLabel}>Orari</p>
-            <p className={styles.infoValue}>Chiuso il lunedì a cena<br />e il martedì tutto il giorno</p>
+            <p className={styles.infoLabel}>{dict.home.info.hours}</p>
+            <p className={styles.infoValue} dangerouslySetInnerHTML={{ __html: dict.home.info.hoursText }}></p>
           </div>
           <div className={styles.infoCard}>
             <p className={styles.infoIcon}>📞</p>
-            <p className={styles.infoLabel}>Prenotazioni</p>
+            <p className={styles.infoLabel}>{dict.home.info.booking}</p>
             <p className={styles.infoValue}>
               <a href="tel:031963624" className={styles.infoPhone}>031 963624</a>
             </p>

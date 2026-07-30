@@ -1,0 +1,205 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "chiSiamo": "Über uns",
+    "menu": "Menü",
+    "webcam": "Webcam",
+    "news": "Neuigkeiten",
+    "contatti": "Kontakt"
+  },
+  "header": {
+    "prenota": "Buchen",
+    "chiudiNumero": "Nummer schließen",
+    "mostraNumero": "Nummer zum Buchen anzeigen"
+  },
+  "layout": {
+    "vaiAlContenuto": "Zum Inhalt springen"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Piano Rancio · 1012 m ü. M.",
+      "title": "Zwischen See und Bergen",
+      "text": "Seit 1957 authentische Küche mit Blick auf den Comer See und die Alpen. Polenta, Tradition und ein atemberaubendes Panorama.",
+      "btnPrimary": "Tisch reservieren",
+      "btnSecondary": "Das Chalet entdecken"
+    },
+    "intro": {
+      "eyebrow": "Unsere Geschichte",
+      "title": "Ein authentischer Ort, mit Leidenschaft erbaut",
+      "text1": "Die Polentoteca Chalet Gabriele befindet sich in Piano Rancio am Fuße des Monte San Primo. Das 1957 von Nuccia und Gabriele erbaute Restaurant steht seit jeher für Einfachheit, Qualität und Höflichkeit.",
+      "text2": "Zwei Speisesäle mit großen Fenstern und Blick auf den Comer See und die Alpenkette. Ein Ort, an dem die Zeit stillsteht.",
+      "btn": "Über uns →"
+    },
+    "signature": {
+      "eyebrow": "Das Spezialgericht",
+      "title": "Polenta, Königin des Tisches",
+      "text1": "Polenta ist der unbestrittene Star auf unserer Speisekarte. Nach einem Familienrezept zubereitet, serviert mit reichhaltigen Saucen und authentischen Aromen der lombardischen Bergtradition.",
+      "text2": "Neben Polenta bietet unsere Speisekarte eine reiche Auswahl an lokalen Spezialitäten, um jeden Gaumen zu befriedigen, von Fleisch bis hin zu Alpenkäse.",
+      "btn": "Menü durchstöbern →"
+    },
+    "facts": {
+      "year": "Gründungsjahr",
+      "height": "Höhe über dem Meeresspiegel",
+      "view": "Panoramablick",
+      "distance": "Von Bellagio"
+    },
+    "panorama": {
+      "eyebrow": "Eine einzigartige Aussicht",
+      "title": "Der See, die Alpen, Ihr Tisch",
+      "text": "Machen Sie nach dem Mittagessen einen Spaziergang durch die Wälder oder fahren Sie nach Bellagio hinunter, um den See zu bewundern.",
+      "btn": "Reservieren Sie Ihren Platz — 031 963624"
+    },
+    "info": {
+      "where": "Wo wir sind",
+      "whereText": "Piano Rancio, Bellagio (CO)<br />Leicht erreichbar, große Parkplätze",
+      "hours": "Öffnungszeiten",
+      "hoursText": "Montagabend und<br />den ganzen Dienstag geschlossen",
+      "booking": "Reservierungen"
+    }
+  },
+  "about": {
+    "opening": {
+      "eyebrow": "Über uns",
+      "title": "Ein mit Händen und Herz erbauter Ort",
+      "lead": "Es ist nicht nur ein Restaurant. Es ist ein Ort, der seit fast siebzig Jahren existiert, Stein für Stein von einer Bergfamilie erbaut, und der sich selbst treu geblieben ist, während sich alles um ihn herum veränderte."
+    },
+    "story": {
+      "caption": "Mariuccia und Gabriele, 1960er Jahre",
+      "eyebrow": "Die Ursprünge · 1957",
+      "title": "Gabriele und Nuccia, eine Familiengeschichte",
+      "p1": "Es war 1957, als <strong>Gabriele Galli</strong>, Sohn von Bauern aus Bellagio, beschloss, eine kleine Bar in Piano Rancio zu eröffnen. An seiner Seite <strong>Mariuccia Sala</strong> — von allen Nuccia genannt — gebürtige Mailänderin, aber mit einer Bergseele.",
+      "p2": "Was als Dorfbar begann, verwandelte sich langsam, Saison für Saison, in ein Restaurant. Nicht aus Ehrgeiz, sondern aus Notwendigkeit: Die Leute kamen hierherauf, setzten sich und baten um Essen. Und Nuccia kochte.",
+      "p3": "Ihr Ziel war einfach und hat sich nie geändert: Einfachheit, Qualität und Höflichkeit. Drei Worte, die auch heute noch jeden Arbeitstag leiten."
+    },
+    "quote": {
+      "text": "\"Einfachheit, Qualität und Höflichkeit. Immer.\"",
+      "cite": "— Gabriele Galli, Gründer"
+    },
+    "toc": {
+      "eyebrow": "Das Spezialgericht",
+      "title": "Il Tóc, die Seele von Bellagio",
+      "p1": "Der <strong>Tóc</strong> ist das traditionelle Gericht von Bellagio schlechthin, mit über 150 Jahren Geschichte. Der Name stammt aus dem lokalen Dialekt <em> \"Tucà\"</em> — berühren — weil er so gegessen wird: mit den Händen, direkt aus dem Kupferkessel, zusammen.",
+      "p2": "Maispolenta, echte Butter und Alpenkäse langsam gemischt, um eine cremige und homogene Mischung zu erhalten. Eine Zubereitung, die Zeit, Geduld und die erfahrene Hand eines wahren <em>Tocchista</em> erfordert. Wenn ein Schritt übersprungen wird, löst sich die Butter aus dem Tóc und er ist nicht mehr genießbar.",
+      "p3": "Jahrhundertelang wurde er nur für Hochzeiten und Taufen zubereitet. Heute bringen wir ihn für Gruppen auf Vorbestellung auf den Tisch, mit intaktem Ritual: der Kupferkessel in der Mitte, Holzlöffel und Lachen ringsum.",
+      "accLabel": "Serviert mit",
+      "acc1": "Missoltini vom Comer See",
+      "acc2": "Lokale Salami und Wurstwaren",
+      "acc3": "Gekochte einheimische Henne",
+      "acc4": "Ragèl — der Digestif im Kessel",
+      "note": "Auf Vorbestellung für Gruppen von mindestens 8 Personen erhältlich"
+    },
+    "identity": {
+      "eyebrow": "Wer wir wirklich sind",
+      "title": "Drei Dinge, die sich nie ändern werden",
+      "c1Title": "Die Familie",
+      "c1Text": "Wir sind eine Familie, die für andere Familien kocht. Seit 1957 dieselbe Hand, dieselbe Sorgfalt, dieselbe Art, im Speisesaal zu sein: als wäre jeder Tisch unser Zuhause.",
+      "c2Title": "Das Rezept",
+      "c2Text": "Tóc bereitet man nicht durch Lesen eines Zettels zu. Man lernt durch Zuschauen, verfeinert es im Laufe der Zeit, führt es mit Respekt für die Erfinder weiter. Nur ein wahrer Tocchista weiß, wann es fertig ist.",
+      "c3Title": "Die Gesellschaft",
+      "c3Text": "Hier isst man im wahrsten Sinne des Wortes nie alleine. Das Restaurant ist immer voll, die Tische nah, das Lachen mischt sich. Ein Sonntag in der Polentoteca fühlt sich an wie ein Fest, auch wenn es keines ist."
+    },
+    "closing": {
+      "eyebrow": "Heute",
+      "title": "Fast siebzig Jahre und derselbe Kessel",
+      "p1": "Gabriele und Nuccia sind nicht mehr hier, aber der Geist, mit dem sie diesen Ort eröffnet haben, ist intakt geblieben. Die Küche funktioniert immer noch wie damals: echte Rohstoffe, lokale Rezepte, keine Abkürzungen.",
+      "p2": "Wer hierherauf kommt, weiß es. Man kommt nicht zufällig in die Polentoteca. Man kommt, weil man gehört hat, dass sich der Aufstieg lohnt. Und jedes Mal geht man mit dem Gefühl, etwas Echtes gegessen zu haben."
+    }
+  },
+  "menu": {
+    "opening": {
+      "eyebrow": "Unsere Küche",
+      "title": "Menü",
+      "lead": "Typische Bergküche, lokale Zutaten, von Generation zu Generation weitergegebene Rezepte. Unsere Gerichte können das ganze Jahr über mitgenommen werden.",
+      "note": "Brot & Gedeck 2,50 € · Reservierungen nur telefonisch: "
+    },
+    "alacarta": {
+      "eyebrow": "À la carte",
+      "title": "Unsere Gerichte"
+    },
+    "fissi": {
+      "eyebrow": "Für Gruppen und Feiern",
+      "title": "Festpreis-Menüs",
+      "sub": "Fenstertische werden in der Reihenfolge der Buchung vergeben. Wein ist im Preis nicht inbegriffen.",
+      "btn": "Buchen — +39 031 963624"
+    },
+    "self": {
+      "eyebrow": "Informeller Service",
+      "title": "Selbstbedienungsmenü",
+      "sub": "Freie Bestellung an der Theke. Auch zum Mitnehmen."
+    },
+    "cta": {
+      "eyebrow": "Buchen Sie Ihren Tisch",
+      "title": "Kommen Sie uns besuchen",
+      "para": "Für Gruppenbuchungen, feste Menüs und Fondues kontaktieren Sie uns direkt telefonisch. Tische mit Seeblick werden in der Reihenfolge der Buchung vergeben.",
+      "btnGhost": "Kontaktieren Sie uns →"
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Kontakt",
+      "title": "Kommen Sie uns besuchen",
+      "lead": "Wir befinden uns in Piano Rancio, 1012 m ü. M., am Fuße des Monte San Primo. Ein charakteristisches Restaurant aus Stein und Holz mit Fenstern mit Blick auf den Comer See und die Alpen.",
+      "note": "Reservierungen nur telefonisch:"
+    },
+    "cards": {
+      "phoneTitle": "Telefon",
+      "phoneNote": "Reservierungen nur telefonisch",
+      "hoursTitle": "Öffnungszeiten",
+      "hoursDays": {
+        "Lunedì": "Montag",
+        "Martedì": "Dienstag",
+        "Mercoledì": "Mittwoch",
+        "Giovedì": "Donnerstag",
+        "Venerdì": "Freitag",
+        "Sabato": "Samstag",
+        "Domenica": "Sonntag"
+      },
+      "hoursStates": {
+        "aperto": "Mittagessen · Abendessen",
+        "solo-pranzo": "Nur Mittagessen",
+        "chiuso": "Geschlossen"
+      },
+      "whereTitle": "Wo wir sind",
+      "whereValue": "Piano Rancio",
+      "whereNote": "Bellagio (CO) · 1012 m ü. M.<br />12 km von Bellagio"
+    },
+    "arrive": {
+      "eyebrow": "Wie Sie uns erreichen",
+      "title": "Zwischen See und Bergen",
+      "p1": "Das Restaurant befindet sich in Piano Rancio, einem kleinen Ort am Fuße des Monte San Primo. Die Fenster der beiden Speisesäle blicken auf den Comer See und die Alpenkette, die die beiden Arme des Sees umgibt.",
+      "p2": "Leicht erreichbar mit allen Verkehrsmitteln, sei es mit dem Auto über die Kantonsstraße oder zu Fuß über die Waldwege. Ein großer kostenloser Parkplatz steht den Gästen zur Verfügung.",
+      "statAlt": "Höhe",
+      "statDist": "Von Bellagio",
+      "statPark": "Parkplatz",
+      "statParkVal": "Kostenlos"
+    },
+    "rules": {
+      "eyebrow": "Bevor Sie kommen",
+      "title": "Nützliche Dinge zu wissen",
+      "items": [
+        {
+          "title": "Fondues und Carbonade",
+          "text": "Erfordern vorherige telefonische Reservierung. Die Chinoise und die Bourguignonne: mindestens 2 Gäste. Die Carbonade: mindestens 6, maximal 10 Gäste."
+        },
+        {
+          "title": "Festpreis-Menüs",
+          "text": "Die Menüs Piano Rancio und Monte San Primo sind für Gruppen reserviert und erfordern eine vorherige Reservierung. Wein ist nicht im Preis inbegriffen."
+        },
+        {
+          "title": "Tische mit Aussicht",
+          "text": "Tische am Fenster mit Blick auf den Comer See werden in der Reihenfolge der Buchung vergeben. Rufen Sie uns rechtzeitig an, um sich Ihren Platz zu sichern."
+        },
+        {
+          "title": "Zum Mitnehmen das ganze Jahr",
+          "text": "Alle Gerichte auf der Speisekarte können das ganze Jahr über zum Mitnehmen bestellt werden. Kontaktieren Sie uns telefonisch, um zu bestellen."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Buchen Sie Ihren Tisch",
+      "title": "Rufen Sie uns direkt an",
+      "para": "Reservierungen werden ausschließlich telefonisch entgegengenommen. Für Fondues, Carbonade und Festpreis-Menüs ist eine Vorabbuchung zwingend erforderlich. Tische mit Seeblick werden in der Reihenfolge der Buchung vergeben.",
+      "btnGhost": "Siehe das Menü →"
+    }
+  }
+}

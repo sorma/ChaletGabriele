@@ -1,0 +1,205 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "chiSiamo": "Quiénes somos",
+    "menu": "Menú",
+    "webcam": "Webcam",
+    "news": "Noticias",
+    "contatti": "Contacto"
+  },
+  "header": {
+    "prenota": "Reservar",
+    "chiudiNumero": "Cerrar número",
+    "mostraNumero": "Mostrar número para reservar"
+  },
+  "layout": {
+    "vaiAlContenuto": "Saltar al contenido"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Piano Rancio · 1012 m s.n.m.",
+      "title": "Entre lago y montañas",
+      "text": "Desde 1957, auténtica cocina con vistas al lago de Como y a los Alpes. Polenta, tradición y un panorama impresionante.",
+      "btnPrimary": "Reservar una mesa",
+      "btnSecondary": "Descubre el chalet"
+    },
+    "intro": {
+      "eyebrow": "Nuestra historia",
+      "title": "Un lugar auténtico, construido con pasión",
+      "text1": "La Polentoteca Chalet Gabriele se encuentra en Piano Rancio, a los pies del monte San Primo. Construido en 1957 por Nuccia y Gabriele, el restaurante siempre ha apostado por la sencillez, la calidad y la cortesía.",
+      "text2": "Dos comedores con cristaleras al lago de Como y los Alpes. Un lugar donde el tiempo se detiene.",
+      "btn": "Quiénes somos →"
+    },
+    "signature": {
+      "eyebrow": "El plato estrella",
+      "title": "La polenta, reina de la mesa",
+      "text1": "La polenta es la protagonista indiscutible de nuestro menú. Preparada según la receta familiar, servida con ricas salsas y sabores auténticos de la tradición montañesa lombarda.",
+      "text2": "Junto a la polenta, un rico menú de especialidades locales para satisfacer todos los paladares, desde carnes hasta quesos de los Alpes.",
+      "btn": "Ver el menú →"
+    },
+    "facts": {
+      "year": "Año de fundación",
+      "height": "Altitud",
+      "view": "Vista panorámica",
+      "distance": "Desde Bellagio"
+    },
+    "panorama": {
+      "eyebrow": "Una vista única",
+      "title": "El lago, los Alpes, tu mesa",
+      "text": "Después de comer, pasea por el bosque o baja a Bellagio para admirar el lago.",
+      "btn": "Reserva tu plaza — 031 963624"
+    },
+    "info": {
+      "where": "Dónde estamos",
+      "whereText": "Piano Rancio, Bellagio (CO)<br />Fácil acceso, amplio aparcamiento",
+      "hours": "Horario",
+      "hoursText": "Cerrado el lunes por la noche<br />y el martes todo el día",
+      "booking": "Reservas"
+    }
+  },
+  "about": {
+    "opening": {
+      "eyebrow": "Quiénes somos",
+      "title": "Un lugar construido con las manos y el corazón",
+      "lead": "No es solo un restaurante. Es un lugar que existe desde hace casi setenta años, construido piedra a piedra por una familia de montaña, manteniéndose fiel a sí mismo cuando todo alrededor cambiaba."
+    },
+    "story": {
+      "caption": "Mariuccia y Gabriele, años 60",
+      "eyebrow": "Los orígenes · 1957",
+      "title": "Gabriele y Nuccia, una historia familiar",
+      "p1": "Era 1957 cuando <strong>Gabriele Galli</strong>, hijo de agricultores de Bellagio, decidió abrir un pequeño bar en Piano Rancio. Junto a él, <strong>Mariuccia Sala</strong> — conocida por todos como Nuccia — milanesa de nacimiento pero con alma de montaña.",
+      "p2": "Lo que comenzó como un bar de pueblo se transformó lentamente, temporada tras temporada, en un restaurante. No por ambición, sino por necesidad: la gente subía aquí, se sentaba y pedía comida. Y Nuccia cocinaba.",
+      "p3": "Su objetivo era simple y nunca ha cambiado: sencillez, calidad y cortesía. Tres palabras que todavía guían cada día de trabajo hoy."
+    },
+    "quote": {
+      "text": "\"Sencillez, calidad y cortesía. Siempre.\"",
+      "cite": "— Gabriele Galli, fundador"
+    },
+    "toc": {
+      "eyebrow": "El plato estrella",
+      "title": "El Tóc, el alma de Bellagio",
+      "p1": "El <strong>Tóc</strong> es el plato tradicional de Bellagio por excelencia, con más de 150 años de historia. El nombre proviene del dialecto local <em> \"Tucà\"</em> — tocar — porque se come con las manos, directamente de la olla, juntos.",
+      "p2": "Polenta de harina de maíz, mantequilla genuina y queso de los Alpes mezclados lentamente para obtener una mezcla cremosa y homogénea. Una preparación que requiere tiempo, paciencia y la mano experta de un verdadero <em>tocchista</em>. Si se salta un paso, el Tóc suelta la mantequilla y ya no se puede comer.",
+      "p3": "Durante siglos solo se preparaba para bodas y bautizos. Hoy lo llevamos a la mesa para grupos con reserva previa, con el ritual intacto: la olla de cobre en el centro, cucharas de madera y risas alrededor.",
+      "accLabel": "Se sirve con",
+      "acc1": "Missoltini del Lago de Como",
+      "acc2": "Embutidos y salamis locales",
+      "acc3": "Gallina local hervida",
+      "acc4": "Ragèl — el digestivo en la olla",
+      "note": "Disponible con reserva previa para grupos de al menos 8 personas"
+    },
+    "identity": {
+      "eyebrow": "Quiénes somos realmente",
+      "title": "Tres cosas que nunca cambiarán",
+      "c1Title": "La familia",
+      "c1Text": "Somos una familia que cocina para otras familias. Desde 1957, la misma mano, el mismo cuidado, la misma forma de estar en el comedor: como si cada mesa fuera nuestro hogar.",
+      "c2Title": "La receta",
+      "c2Text": "El Tóc no se prepara leyendo un papel. Se aprende observando, se perfecciona con el tiempo, se lleva adelante con respeto por quienes lo inventaron. Solo un verdadero tocchista sabe cuándo está listo.",
+      "c3Title": "La compañía",
+      "c3Text": "Aquí nunca se come solo en el verdadero sentido de la palabra. El restaurante siempre está lleno, las mesas cerca, las risas mezclándose. Un domingo en la Polentoteca se siente como una fiesta, incluso cuando no lo es."
+    },
+    "closing": {
+      "eyebrow": "Hoy",
+      "title": "Casi setenta años y la misma olla",
+      "p1": "Gabriele y Nuccia ya no están, pero el espíritu con el que abrieron este lugar se ha mantenido intacto. La cocina sigue funcionando como entonces: materias primas reales, recetas locales, sin atajos.",
+      "p2": "Quienes suben aquí lo saben. No vienes a la Polentoteca por casualidad. Vienes porque escuchaste que vale la pena subir. Y cada vez te vas con la sensación de haber comido algo real."
+    }
+  },
+  "menu": {
+    "opening": {
+      "eyebrow": "Nuestra cocina",
+      "title": "Menú",
+      "lead": "Cocina típica de montaña, ingredientes locales, recetas transmitidas de generación en generación. Nuestros platos se pueden llevar todo el año.",
+      "note": "Pan y cubierto 2,50 € · Reservas solo por teléfono: "
+    },
+    "alacarta": {
+      "eyebrow": "A la carta",
+      "title": "Nuestros platos"
+    },
+    "fissi": {
+      "eyebrow": "Para grupos y compañías",
+      "title": "Menús a precio fijo",
+      "sub": "Las mesas junto a la ventana se asignan en orden de reserva. El vino no está incluido en el precio.",
+      "btn": "Reservar — +39 031 963624"
+    },
+    "self": {
+      "eyebrow": "Servicio informal",
+      "title": "Menú Autoservicio",
+      "sub": "Pedido libre en la barra. También disponible para llevar."
+    },
+    "cta": {
+      "eyebrow": "Reserva tu mesa",
+      "title": "Ven a visitarnos",
+      "para": "Para reservas de grupos, menús fijos y fondues, contáctenos directamente por teléfono. Las mesas con vistas al lago se asignan por orden de reserva.",
+      "btnGhost": "Contáctanos →"
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contacto",
+      "title": "Ven a visitarnos",
+      "lead": "Estamos situados en Piano Rancio, a 1012 m s.n.m., a los pies del monte San Primo. Un restaurante característico de piedra y madera con ventanales al lago de Como y a los Alpes.",
+      "note": "Reservas solo por teléfono:"
+    },
+    "cards": {
+      "phoneTitle": "Teléfono",
+      "phoneNote": "Reservas solo por teléfono",
+      "hoursTitle": "Horario",
+      "hoursDays": {
+        "Lunedì": "Lunes",
+        "Martedì": "Martes",
+        "Mercoledì": "Miércoles",
+        "Giovedì": "Jueves",
+        "Venerdì": "Viernes",
+        "Sabato": "Sábado",
+        "Domenica": "Domingo"
+      },
+      "hoursStates": {
+        "aperto": "Almuerzo · Cena",
+        "solo-pranzo": "Solo almuerzo",
+        "chiuso": "Cerrado"
+      },
+      "whereTitle": "Dónde estamos",
+      "whereValue": "Piano Rancio",
+      "whereNote": "Bellagio (CO) · 1012 m s.n.m.<br />A 12 km de Bellagio"
+    },
+    "arrive": {
+      "eyebrow": "Cómo llegar",
+      "title": "Entre lago y montaña",
+      "p1": "El restaurante se encuentra en Piano Rancio, una pequeña localidad a los pies del monte San Primo. Los ventanales de los dos comedores asoman al lago de Como y a la cadena de los Alpes que rodea los dos ramales del lago.",
+      "p2": "Fácilmente accesible por cualquier medio, ya sea en coche por la carretera comarcal o a pie por los senderos del bosque. Hay un amplio aparcamiento gratuito para los clientes.",
+      "statAlt": "Altitud",
+      "statDist": "Desde Bellagio",
+      "statPark": "Aparcamiento",
+      "statParkVal": "Gratis"
+    },
+    "rules": {
+      "eyebrow": "Antes de venir",
+      "title": "Cosas útiles que saber",
+      "items": [
+        {
+          "title": "Fondues y Carbonade",
+          "text": "Requieren reserva telefónica previa. La Chinoise y la Bourguignonne: mínimo 2 personas. La Carbonade: mínimo 6, máximo 10 personas."
+        },
+        {
+          "title": "Menús a precio fijo",
+          "text": "Los menús Piano Rancio y Monte San Primo están reservados para grupos y requieren reserva previa. El vino no está incluido en el precio."
+        },
+        {
+          "title": "Mesas con vista",
+          "text": "Las mesas junto a la ventana con vistas al lago de Como se asignan por orden de reserva. Llámanos con antelación para asegurarte la tuya."
+        },
+        {
+          "title": "Para llevar todo el año",
+          "text": "Todos los platos del menú están disponibles para llevar todo el año. Contáctanos por teléfono para hacer un pedido."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Reserva tu mesa",
+      "title": "Llámanos directamente",
+      "para": "Las reservas se hacen exclusivamente por teléfono. La reserva previa es obligatoria para fondues, carbonade y menús fijos. Las mesas con vistas al lago se asignan por orden de reserva.",
+      "btnGhost": "Ver el menú →"
+    }
+  }
+}

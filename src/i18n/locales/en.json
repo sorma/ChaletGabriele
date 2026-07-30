@@ -1,0 +1,205 @@
+{
+  "nav": {
+    "home": "Home",
+    "chiSiamo": "About Us",
+    "menu": "Menu",
+    "webcam": "Webcam",
+    "news": "News",
+    "contatti": "Contact"
+  },
+  "header": {
+    "prenota": "Book",
+    "chiudiNumero": "Close number",
+    "mostraNumero": "Show number to book"
+  },
+  "layout": {
+    "vaiAlContenuto": "Skip to content"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Piano Rancio · 1012 m a.s.l.",
+      "title": "Between lake and mountains",
+      "text": "Since 1957, authentic cuisine overlooking Lake Como and the Alps. Polenta, tradition, and a breathtaking panorama.",
+      "btnPrimary": "Book a table",
+      "btnSecondary": "Discover the chalet"
+    },
+    "intro": {
+      "eyebrow": "Our story",
+      "title": "An authentic place, built with passion",
+      "text1": "Polentoteca Chalet Gabriele is located in Piano Rancio, at the foot of Mount San Primo. Built in 1957 by Nuccia and Gabriele, the restaurant has always aimed for simplicity, quality, and courtesy.",
+      "text2": "Two dining rooms with large windows overlooking Lake Como and the Alps. A place where time slows down.",
+      "btn": "About us →"
+    },
+    "signature": {
+      "eyebrow": "The signature dish",
+      "title": "Polenta, queen of the table",
+      "text1": "Polenta is the undisputed star of our menu. Prepared according to a family recipe, served with rich sauces and authentic flavors of the Lombard mountain tradition.",
+      "text2": "Alongside polenta, a rich menu of local specialties to satisfy every palate, from meats to alpine cheeses.",
+      "btn": "Browse the menu →"
+    },
+    "facts": {
+      "year": "Year of foundation",
+      "height": "Altitude",
+      "view": "Panoramic view",
+      "distance": "From Bellagio"
+    },
+    "panorama": {
+      "eyebrow": "A unique view",
+      "title": "The lake, the Alps, your table",
+      "text": "After lunch, take a walk in the woods or head down to Bellagio to admire the lake.",
+      "btn": "Reserve your spot — 031 963624"
+    },
+    "info": {
+      "where": "Where we are",
+      "whereText": "Piano Rancio, Bellagio (CO)<br />Easily accessible, ample parking",
+      "hours": "Opening hours",
+      "hoursText": "Closed Monday for dinner<br />and all day Tuesday",
+      "booking": "Reservations"
+    }
+  },
+  "about": {
+    "opening": {
+      "eyebrow": "About Us",
+      "title": "A place built with hands and heart",
+      "lead": "It's not just a restaurant. It's a place that has existed for almost seventy years, built stone by stone by a mountain family, remaining true to itself when everything around was changing."
+    },
+    "story": {
+      "caption": "Mariuccia and Gabriele, 1960s",
+      "eyebrow": "The origins · 1957",
+      "title": "Gabriele and Nuccia, a family story",
+      "p1": "It was 1957 when <strong>Gabriele Galli</strong>, son of farmers from Bellagio, decided to open a small bar in Piano Rancio. Alongside him, <strong>Mariuccia Sala</strong> — known to all as Nuccia — Milanese by birth but with a mountain soul.",
+      "p2": "What started as a village bar slowly transformed, season after season, into a restaurant. Not out of ambition, but out of necessity: people came up here, sat down, and asked for food. And Nuccia cooked.",
+      "p3": "Their goal was simple and has never changed: simplicity, quality, and courtesy. Three words that still guide every working day today."
+    },
+    "quote": {
+      "text": "\"Simplicity, quality, and courtesy. Always.\"",
+      "cite": "— Gabriele Galli, founder"
+    },
+    "toc": {
+      "eyebrow": "The signature dish",
+      "title": "Il Tóc, the soul of Bellagio",
+      "p1": "<strong>Tóc</strong> is the traditional dish of Bellagio par excellence, with over 150 years of history. The name comes from the local dialect <em> \"Tucà\"</em> — to touch — because it is eaten with hands, directly from the cauldron, together.",
+      "p2": "Cornmeal polenta, genuine butter, and alpine cheese slowly mixed to obtain a creamy and homogeneous mixture. A preparation that requires time, patience, and the expert hand of a true <em>tocchista</em>. If a step is missed, the Tóc releases the butter and is no longer edible.",
+      "p3": "For centuries it was prepared only for weddings and baptisms. Today we bring it to the table for groups upon reservation, with the ritual intact: the copper cauldron in the center, wooden spoons, and laughter all around.",
+      "accLabel": "Served with",
+      "acc1": "Missoltini from Lake Como",
+      "acc2": "Local salami and cold cuts",
+      "acc3": "Boiled local hen",
+      "acc4": "Ragèl — the digestive in the cauldron",
+      "note": "Available upon reservation for groups of at least 8 people"
+    },
+    "identity": {
+      "eyebrow": "Who we really are",
+      "title": "Three things that will never change",
+      "c1Title": "Family",
+      "c1Text": "We are a family cooking for other families. Since 1957, the same hand, the same care, the same way of being in the dining room: as if every table were our home.",
+      "c2Title": "The recipe",
+      "c2Text": "Tóc is not prepared by reading a piece of paper. You learn by watching, refine it over time, carry it forward with respect for those who invented it. Only a true tocchista knows when it's ready.",
+      "c3Title": "The company",
+      "c3Text": "Here you never eat alone in the true sense of the word. The restaurant is always full, the tables close, laughter mixing. A Sunday at the Polentoteca feels like a party even when it's not."
+    },
+    "closing": {
+      "eyebrow": "Today",
+      "title": "Almost seventy years and the same cauldron",
+      "p1": "Gabriele and Nuccia are no longer here, but the spirit with which they opened this place has remained intact. The kitchen still works as it did then: real raw materials, local recipes, no shortcuts.",
+      "p2": "Those who come up here know it. You don't come to the Polentoteca by chance. You come because you heard it's worth the climb. And every time you leave with the feeling of having eaten something real."
+    }
+  },
+  "menu": {
+    "opening": {
+      "eyebrow": "Our cuisine",
+      "title": "Menu",
+      "lead": "Typical mountain cuisine, local ingredients, recipes handed down from generation to generation. Our dishes are available for takeaway all year round.",
+      "note": "Bread & cover charge € 2.50 · Telephone reservations only: "
+    },
+    "alacarta": {
+      "eyebrow": "A la carte",
+      "title": "Our dishes"
+    },
+    "fissi": {
+      "eyebrow": "For groups and parties",
+      "title": "Set menus",
+      "sub": "Window tables are assigned in order of booking. Wine is not included in the price.",
+      "btn": "Book — +39 031 963624"
+    },
+    "self": {
+      "eyebrow": "Informal service",
+      "title": "Self Service Menu",
+      "sub": "Order at the counter. Takeaway also available."
+    },
+    "cta": {
+      "eyebrow": "Book your table",
+      "title": "Come and visit us",
+      "para": "For group bookings, set menus, and fondues, contact us directly by phone. Tables with lake views are assigned in order of booking.",
+      "btnGhost": "Contact us →"
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Come and visit us",
+      "lead": "We are located in Piano Rancio, at 1012 m a.s.l., at the foot of Mount San Primo. A characteristic stone and wood restaurant with windows overlooking Lake Como and the Alps.",
+      "note": "Telephone reservations only:"
+    },
+    "cards": {
+      "phoneTitle": "Phone",
+      "phoneNote": "Telephone reservations only",
+      "hoursTitle": "Opening hours",
+      "hoursDays": {
+        "Lunedì": "Monday",
+        "Martedì": "Tuesday",
+        "Mercoledì": "Wednesday",
+        "Giovedì": "Thursday",
+        "Venerdì": "Friday",
+        "Sabato": "Saturday",
+        "Domenica": "Sunday"
+      },
+      "hoursStates": {
+        "aperto": "Lunch · Dinner",
+        "solo-pranzo": "Lunch only",
+        "chiuso": "Closed"
+      },
+      "whereTitle": "Where we are",
+      "whereValue": "Piano Rancio",
+      "whereNote": "Bellagio (CO) · 1012 m a.s.l.<br />12 km from Bellagio"
+    },
+    "arrive": {
+      "eyebrow": "How to reach us",
+      "title": "Between lake and mountain",
+      "p1": "The restaurant is located in Piano Rancio, a small town at the foot of Mount San Primo. The windows of the two dining rooms overlook Lake Como and the Alps surrounding the two branches of the lake.",
+      "p2": "Easily accessible by any means, either by car along the provincial road or on foot along the forest paths. A large free car park is available for guests.",
+      "statAlt": "Altitude",
+      "statDist": "From Bellagio",
+      "statPark": "Parking",
+      "statParkVal": "Free"
+    },
+    "rules": {
+      "eyebrow": "Before coming",
+      "title": "Useful things to know",
+      "items": [
+        {
+          "title": "Fondues and Carbonade",
+          "text": "Require advance telephone reservation. Chinoise and Bourguignonne: minimum 2 guests. Carbonade: minimum 6, maximum 10 guests."
+        },
+        {
+          "title": "Set menus",
+          "text": "The Piano Rancio and Monte San Primo menus are reserved for groups and parties and require advance booking. Wine is not included in the price."
+        },
+        {
+          "title": "Tables with a view",
+          "text": "Tables by the window with a view of Lake Como are assigned in order of booking. Call us in advance to secure yours."
+        },
+        {
+          "title": "Takeaway all year round",
+          "text": "All menu dishes are also available for takeaway all year round. Contact us by phone to order."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Book your table",
+      "title": "Call us directly",
+      "para": "Reservations are made exclusively by telephone. Advance booking is mandatory for fondues, carbonade, and set menus. Tables with lake views are assigned in order of booking.",
+      "btnGhost": "See the menu →"
+    }
+  }
+}

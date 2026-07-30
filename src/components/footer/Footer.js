@@ -1,21 +1,23 @@
 import Link from 'next/link';
 import styles from './Footer.module.css';
 
-const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/chi-siamo', label: 'Chi siamo' },
-  { href: '/menu', label: 'Menu' },
-  { href: '/webcam', label: 'Webcam' },
-  { href: '/news', label: 'News' },
-  { href: '/contatti', label: 'Contatti' },
-];
+export default function Footer({ dict, lang = 'it' }) {
+  const navLinks = [
+    { href: '/', labelKey: 'home' },
+    { href: '/chi-siamo', labelKey: 'chiSiamo' },
+    { href: '/menu', labelKey: 'menu' },
+    { href: '/webcam', labelKey: 'webcam' },
+    { href: '/news', labelKey: 'news' },
+    { href: '/contatti', labelKey: 'contatti' },
+  ];
 
-const infoLinks = [
-  { href: '/privacy-policy', label: 'Privacy Policy' },
-  { href: '/termini-e-condizioni', label: 'Termini e condizioni' },
-];
+  const infoLinks = [
+    { href: '/privacy-policy', label: 'Privacy Policy' },
+    { href: '/termini-e-condizioni', label: 'Termini e condizioni' },
+  ];
 
-export default function Footer() {
+  const localizeUrl = (path) => (path === '/' ? `/${lang}` : `/${lang}${path}`);
+
   return (
     <footer className={styles.siteFooter}>
 
@@ -36,8 +38,8 @@ export default function Footer() {
           <p className={styles.colTitle}>Navigazione</p>
           <div className={styles.linkList}>
             {navLinks.map((link) => (
-              <Link key={link.href} href={link.href} className={styles.footerLink}>
-                {link.label}
+              <Link key={link.href} href={localizeUrl(link.href)} className={styles.footerLink}>
+                {dict?.nav?.[link.labelKey] || link.labelKey}
               </Link>
             ))}
           </div>
@@ -48,7 +50,7 @@ export default function Footer() {
           <p className={styles.colTitle}>Informazioni</p>
           <div className={styles.linkList}>
             {infoLinks.map((link) => (
-              <Link key={link.href} href={link.href} className={styles.footerLink}>
+              <Link key={link.href} href={localizeUrl(link.href)} className={styles.footerLink}>
                 {link.label}
               </Link>
             ))}
@@ -74,8 +76,8 @@ export default function Footer() {
             © {new Date().getFullYear()} Polentoteca Chalet Gabriele. Tutti i diritti riservati.
           </p>
           <div className={styles.footerLegal}>
-            <Link href="/privacy-policy" className={styles.legalLink}>Privacy Policy</Link>
-            <Link href="/termini-e-condizioni" className={styles.legalLink}>Termini e condizioni</Link>
+            <Link href={localizeUrl("/privacy-policy")} className={styles.legalLink}>Privacy Policy</Link>
+            <Link href={localizeUrl("/termini-e-condizioni")} className={styles.legalLink}>Termini e condizioni</Link>
           </div>
         </div>
       </div>

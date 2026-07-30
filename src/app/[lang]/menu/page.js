@@ -6,6 +6,7 @@ import styles from './page.module.css';
 import { MenuAlaCartaClient, MenuSelfClient } from './MenuClient';
 import { getCloudflareContext } from '@opennextjs/cloudflare';
 import { getMenuFromDB } from '@/lib/db-menu';
+import { getDictionary } from '@/i18n/dictionaries';
 export const dynamic = 'force-dynamic';
 
 /**
@@ -24,23 +25,24 @@ async function getMenu() {
   }
 }
 
-export default async function Page() {
+export default async function Page({ params }) {
   const { alacarta, self: selfCategorie, fissi: menuFissi } = await getMenu();
+  const lang = (await params)?.lang || 'it';
+  const dict = await getDictionary(lang);
+  const localizeUrl = (path) => (path === '/' ? `/${lang}` : `/${lang}${path}`);
 
   return (
     <main className={styles.page}>
 
       <section className={styles.opening}>
         <div className={`container ${styles.openingInner}`}>
-          <p className={styles.eyebrow}>La nostra cucina</p>
-          <h1 className={styles.openingTitle}>Menu</h1>
+          <p className={styles.eyebrow}>{dict.menu.opening.eyebrow}</p>
+          <h1 className={styles.openingTitle}>{dict.menu.opening.title}</h1>
           <p className={styles.openingLead}>
-            Cucina tipica di montagna, materie prime del territorio,
-            ricette tramandate di generazione in generazione.
-            I nostri piatti si possono asportare tutto l&apos;anno.
+            {dict.menu.opening.lead}
           </p>
           <p className={styles.openingNote}>
-            Pane &amp; coperto € 2,50 · Prenotazioni solo telefonicamente:{' '}
+            {dict.menu.opening.note}
             <a href="tel:031963624" className={styles.openingPhone}>031 963624</a>
           </p>
         </div>
@@ -48,8 +50,8 @@ export default async function Page() {
 
       <section className={styles.alaCartaSection}>
         <div className="container">
-          <p className={styles.eyebrow}>Alla carta</p>
-          <h2 className={styles.sectionTitle}>I nostri piatti</h2>
+          <p className={styles.eyebrow}>{dict.menu.alacarta.eyebrow}</p>
+          <h2 className={styles.sectionTitle}>{dict.menu.alacarta.title}</h2>
           {alacarta.length > 0 && (
             <MenuAlaCartaClient categorie={alacarta} />
           )}
@@ -58,11 +60,10 @@ export default async function Page() {
 
       <section className={styles.fissiSection}>
         <div className="container">
-          <p className={styles.eyebrow}>Per gruppi e compagnie</p>
-          <h2 className={styles.sectionTitle}>Menu a prezzo fisso</h2>
+          <p className={styles.eyebrow}>{dict.menu.fissi.eyebrow}</p>
+          <h2 className={styles.sectionTitle}>{dict.menu.fissi.title}</h2>
           <p className={styles.sectionSub}>
-            I tavoli alla vetrata vengono assegnati in ordine di prenotazione.
-            Nel prezzo è escluso il vino.
+            {dict.menu.fissi.sub}
           </p>
           <div className={styles.fissiGrid}>
             {menuFissi.map((menu) => (
@@ -89,7 +90,7 @@ export default async function Page() {
                   ))}
                 </div>
                 <a href="tel:031963624" className={styles.menuCardBtn}>
-                  Prenota — 031 963624
+                  {dict.menu.fissi.btn}
                 </a>
               </div>
             ))}
@@ -99,9 +100,9 @@ export default async function Page() {
 
       <section className={styles.selfSection}>
         <div className="container">
-          <p className={styles.eyebrow}>Servizio informale</p>
-          <h2 className={styles.sectionTitle}>Menu Self Service</h2>
-          <p className={styles.sectionSub}>Ordine libero al banco. Disponibile anche da asporto.</p>
+          <p className={styles.eyebrow}>{dict.menu.self.eyebrow}</p>
+          <h2 className={styles.sectionTitle}>{dict.menu.self.title}</h2>
+          <p className={styles.sectionSub}>{dict.menu.self.sub}</p>
           {selfCategorie.length > 0 && (
             <MenuSelfClient selfCategorie={selfCategorie} />
           )}
@@ -111,16 +112,15 @@ export default async function Page() {
       <section className={styles.cta}>
         <div className={`container ${styles.ctaInner}`}>
           <div className={styles.ctaText}>
-            <p className={styles.eyebrow}>Prenota il tuo tavolo</p>
-            <h2 className={styles.ctaTitle}>Vieni a trovarci</h2>
+            <p className={styles.eyebrow}>{dict.menu.cta.eyebrow}</p>
+            <h2 className={styles.ctaTitle}>{dict.menu.cta.title}</h2>
             <p className={styles.ctaPara}>
-              Per prenotazioni di gruppo, menu fissi e fondute contattaci direttamente per telefono.
-              I tavoli con vista sul lago vengono assegnati in ordine di prenotazione.
+              {dict.menu.cta.para}
             </p>
           </div>
           <div className={styles.ctaActions}>
             <a href="tel:031963624" className={styles.ctaBtn}>📞 031 963624</a>
-            <Link href="/contatti" className={styles.ctaBtnGhost}>Contattaci →</Link>
+            <Link href={localizeUrl("/contatti")} className={styles.ctaBtnGhost}>{dict.menu.cta.btnGhost}</Link>
           </div>
         </div>
       </section>

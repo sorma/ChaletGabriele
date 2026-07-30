@@ -1,23 +1,27 @@
 import Link from 'next/link';
 import styles from './Nav.module.css';
 
-const links = [
-  { href: '/', label: 'Home' },
-  { href: '/chi-siamo', label: 'Chi siamo' },
-  { href: '/menu', label: 'Menu' },
-  { href: '/webcam', label: 'Webcam' },
-  { href: '/news', label: 'News' },
-  { href: '/contatti', label: 'Contatti' }
-];
+export default function Nav({ dict, lang = 'it' }) {
+  const links = [
+    { href: '/', labelKey: 'home' },
+    { href: '/chi-siamo', labelKey: 'chiSiamo' },
+    { href: '/menu', labelKey: 'menu' },
+    { href: '/webcam', labelKey: 'webcam' },
+    { href: '/news', labelKey: 'news' },
+    { href: '/contatti', labelKey: 'contatti' }
+  ];
 
-export default function Nav() {
   return (
     <nav className={styles.mainNav} aria-label="Navigazione principale">
-      {links.map((link) => (
-        <Link key={link.href} href={link.href} className={styles.navLink}>
-          {link.label}
-        </Link>
-      ))}
+      {links.map((link) => {
+        // Base route starts with lang, e.g. /en or /en/menu
+        const localizedHref = link.href === '/' ? `/${lang}` : `/${lang}${link.href}`;
+        return (
+          <Link key={link.href} href={localizedHref} className={styles.navLink}>
+            {dict?.nav?.[link.labelKey] || link.labelKey}
+          </Link>
+        );
+      })}
     </nav>
   );
 }

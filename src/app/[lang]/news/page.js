@@ -1,22 +1,29 @@
 import styles from './page.module.css';
+import { getDictionary } from '@/i18n/dictionaries';
+import Link from 'next/link';
 
-export const metadata = {
-  title: 'News | Polentoteca Chalet Gabriele',
-  description: 'Novità, eventi stagionali e aggiornamenti dalla Polentoteca Chalet Gabriele.',
-};
+export async function generateMetadata({ params }) {
+  const lang = (await params)?.lang || 'it';
+  const dict = await getDictionary(lang);
+  return {
+    title: `${dict.news.title} | Polentoteca Chalet Gabriele`,
+    description: dict.news.lead,
+  };
+}
 
-export default function NewsPage() {
+export default async function NewsPage({ params }) {
+  const lang = (await params)?.lang || 'it';
+  const dict = await getDictionary(lang);
+  const localizeUrl = (path) => (path === '/' ? `/${lang}` : `/${lang}${path}`);
+
   return (
     <section className={styles.page}>
       <div className="container">
 
         <div className={styles.hero}>
-          <p className="eyebrow">News &amp; Aggiornamenti</p>
-          <h1 className={styles.title}>Resta aggiornato</h1>
-          <p className={styles.lead}>
-            Qui trovi eventi stagionali, serate speciali e tutte le novità
-            dello Chalet Gabriele. Torna a trovarci presto.
-          </p>
+          <p className="eyebrow">{dict.news.eyebrow}</p>
+          <h1 className={styles.title}>{dict.news.title}</h1>
+          <p className={styles.lead}>{dict.news.lead}</p>
         </div>
 
         <div className={styles.layout}>
@@ -41,16 +48,12 @@ export default function NewsPage() {
                 </svg>
               </div>
 
-              <h2 className={styles.emptyTitle}>Presto qui le prime novità</h2>
+              <h2 className={styles.emptyTitle}>{dict.news.emptyTitle}</h2>
 
-              <p className={styles.emptyText}>
-                Questa sezione è pronta ad accogliere articoli, aggiornamenti ed
-                eventi. Nel frattempo puoi contattarci direttamente per qualsiasi
-                informazione.
-              </p>
+              <p className={styles.emptyText}>{dict.news.emptyText}</p>
 
-              <a href="/contatti" className={styles.emptyBtn}>
-                Contattaci
+              <Link href={localizeUrl('/contatti')} className={styles.emptyBtn}>
+                {dict.news.emptyBtn}
                 <svg
                   width="14"
                   height="14"
@@ -64,20 +67,17 @@ export default function NewsPage() {
                 >
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </main>
 
           <aside className={styles.sidebar}>
             <div className={styles.sideCard}>
-              <p className="eyebrow">Dove siamo</p>
-              <h3 className={styles.sideTitle}>Vieni a trovarci</h3>
-              <p className={styles.sideText}>
-                Polentoteca Chalet Gabriele —<br />
-                aperto nei fine settimana e nei giorni festivi.
-              </p>
-              <a href="/contatti" className={styles.sideLink}>
-                Indicazioni &amp; orari
+              <p className="eyebrow">{dict.news.sideWhereEyebrow}</p>
+              <h3 className={styles.sideTitle}>{dict.news.sideWhereTitle}</h3>
+              <p className={styles.sideText}>{dict.news.sideWhereText}</p>
+              <Link href={localizeUrl('/contatti')} className={styles.sideLink}>
+                {dict.news.sideWhereLink}
                 <svg
                   width="13"
                   height="13"
@@ -91,18 +91,15 @@ export default function NewsPage() {
                 >
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
             </div>
 
             <div className={styles.sideCardAlt}>
-              <p className="eyebrow">Prenota</p>
-              <h3 className={styles.sideTitle}>Riserva il tuo tavolo</h3>
-              <p className={styles.sideText}>
-                Per gruppi o serate speciali ti consigliamo di prenotare in anticipo.
-                Chiamaci o scrivici: siamo sempre disponibili.
-              </p>
-              <a href="/contatti" className={styles.sideLink}>
-                Prenota ora
+              <p className="eyebrow">{dict.news.sideBookEyebrow}</p>
+              <h3 className={styles.sideTitle}>{dict.news.sideBookTitle}</h3>
+              <p className={styles.sideText}>{dict.news.sideBookText}</p>
+              <a href="tel:031963624" className={styles.sideLink}>
+                {dict.news.sideBookLink}
                 <svg
                   width="13"
                   height="13"

@@ -201,5 +201,51 @@
       "para": "Reservations are made exclusively by telephone. Advance booking is mandatory for fondues, carbonade, and set menus. Tables with lake views are assigned in order of booking.",
       "btnGhost": "See the menu →"
     }
+  },
+  "news": {
+    "eyebrow": "News & Updates",
+    "title": "Stay updated",
+    "lead": "Here you'll find seasonal events, special evenings and all the latest from Chalet Gabriele. Come back soon.",
+    "emptyTitle": "Coming soon",
+    "emptyText": "This section is ready to host articles, updates and events. In the meantime, feel free to contact us directly for any information.",
+    "emptyBtn": "Contact us",
+    "sideWhereEyebrow": "Where we are",
+    "sideWhereTitle": "Come and visit us",
+    "sideWhereText": "Polentoteca Chalet Gabriele — open weekends and public holidays.",
+    "sideWhereLink": "Directions & hours",
+    "sideBookEyebrow": "Book",
+    "sideBookTitle": "Reserve your table",
+    "sideBookText": "For groups or special evenings we recommend booking in advance. Call or write to us: we are always available.",
+    "sideBookLink": "Book now"
+  },
+  "webcam": {
+    "eyebrow": "Webcam",
+    "title": "Webcam",
+    "lead": "Live panoramic view of Lake Como and the Alps from the Chalet Gabriele terrace.",
+    "cardTitle": "Coming soon",
+    "cardText": "We're working on bringing you the live view. Check back soon.",
+    "sideEyebrow": "Ready",
+    "sideTitle": "Dedicated page",
+    "sideText": "This page will soon feature a live webcam with a panoramic view."
+  },
+  "privacy": {
+    "eyebrow": "Privacy Policy",
+    "title": "Privacy Policy",
+    "lead": "Information on the processing of personal data pursuant to EU Regulation 2016/679 (GDPR).",
+    "cardTitle": "Privacy policy coming soon",
+    "cardText": "The full text of the privacy policy will be available shortly.",
+    "sideEyebrow": "Legal document",
+    "sideTitle": "Privacy Notice",
+    "sideText": "Pursuant to Art. 13 GDPR."
+  },
+  "termini": {
+    "eyebrow": "Terms & Conditions",
+    "title": "Terms & Conditions",
+    "lead": "Terms of use and booking policy of Polentoteca Chalet Gabriele.",
+    "cardTitle": "Document coming soon",
+    "cardText": "The full terms of use will be available shortly.",
+    "sideEyebrow": "Legal document",
+    "sideTitle": "Terms of use",
+    "sideText": "Applicable to the use of this website and for bookings."
   }
 }

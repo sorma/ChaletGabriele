@@ -3,9 +3,9 @@ import { NextResponse } from 'next/server';
 import { getMenuFromDB } from '@/lib/db-menu';
 
 /**
- * GET /api/menu
- * Restituisce tutto il menu letto da Cloudflare D1.
- * Utile per debug, curl o accesso esterno.
+ * GET /api/menu?lang=en
+ * Restituisce tutto il menu letto da Cloudflare D1, nella lingua richiesta.
+ * Lingue supportate: it (default), en, es, de
  *
  * Struttura risposta:
  * {
@@ -14,10 +14,14 @@ import { getMenuFromDB } from '@/lib/db-menu';
  *   fissi:    [ { id, nome, prezzo, incluso, portate } ]
  * }
  */
-export async function GET() {
+export async function GET(request) {
   try {
+    const { searchParams } = new URL(request.url);
+    const lang = ['it', 'en', 'es', 'de'].includes(searchParams.get('lang'))
+      ? searchParams.get('lang')
+      : 'it';
     const { env } = await getCloudflareContext({ async: true });
-    const menu = await getMenuFromDB(env.DB);
+    const menu = await getMenuFromDB(env.DB, lang);
     return NextResponse.json(menu);
   } catch (err) {
     console.error('[/api/menu] Errore:', err);

@@ -1,26 +1,36 @@
 import styles from './page.module.css';
+import { getDictionary } from '@/i18n/dictionaries';
 
-export const metadata = { title: 'Termini e condizioni | Polentoteca Chalet Gabriele' };
+export async function generateMetadata({ params }) {
+  const lang = (await params)?.lang || 'it';
+  const dict = await getDictionary(lang);
+  return {
+    title: `${dict.termini.title} | Polentoteca Chalet Gabriele`,
+    description: dict.termini.lead,
+  };
+}
 
-export default function Page() {
+export default async function Page({ params }) {
+  const lang = (await params)?.lang || 'it';
+  const dict = await getDictionary(lang);
+
   return (
     <section className={styles.page}>
       <div className="container">
         <div className={styles.hero}>
-          <p className="eyebrow">Termini e condizioni</p>
-          <h1 className={styles.title}>Termini e condizioni</h1>
-          <p className={styles.lead}>Pagina tecnica predisposta per condizioni d’uso, policy prenotazioni e testi legali.</p>
+          <p className="eyebrow">{dict.termini.eyebrow}</p>
+          <h1 className={styles.title}>{dict.termini.title}</h1>
+          <p className={styles.lead}>{dict.termini.lead}</p>
         </div>
         <div className={styles.layout}>
           <article className={styles.mainCard}>
-            <h2>Sezione pronta da sviluppare</h2>
-            <p>Il layout è coerente con il resto del progetto e mantiene una lettura ordinata anche per contenuti formali.</p>
-            <p>La separazione dei fogli di stile ti aiuta a gestire meglio anche queste sezioni.</p>
+            <h2>{dict.termini.cardTitle}</h2>
+            <p>{dict.termini.cardText}</p>
           </article>
           <aside className={styles.sideCard}>
-            <p className="eyebrow">Base CSS dedicata</p>
-            <h3>File separato per questa pagina</h3>
-            <p>Questa cartella include sia <strong>page.js</strong> sia <strong>page.module.css</strong>, così puoi lavorare sezione per sezione.</p>
+            <p className="eyebrow">{dict.termini.sideEyebrow}</p>
+            <h3>{dict.termini.sideTitle}</h3>
+            <p>{dict.termini.sideText}</p>
           </aside>
         </div>
       </div>

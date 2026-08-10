@@ -14,10 +14,10 @@ export const dynamic = 'force-dynamic';
  * Funziona sia in locale (via wrangler dev proxy) sia su Cloudflare Workers.
  * Elimina la dipendenza da fetch HTTP interna che non funziona su Workers.
  */
-async function getMenu() {
+async function getMenu(lang = 'it') {
   try {
     const { env } = await getCloudflareContext({ async: true });
-    return await getMenuFromDB(env.DB);
+    return await getMenuFromDB(env.DB, lang);
   } catch (err) {
     console.error('[menu/page] Impossibile caricare il menu dal DB:', err);
     // Ritorna strutture vuote: la pagina si renderizza senza errori
@@ -26,8 +26,8 @@ async function getMenu() {
 }
 
 export default async function Page({ params }) {
-  const { alacarta, self: selfCategorie, fissi: menuFissi } = await getMenu();
   const lang = (await params)?.lang || 'it';
+  const { alacarta, self: selfCategorie, fissi: menuFissi } = await getMenu(lang);
   const dict = await getDictionary(lang);
   const localizeUrl = (path) => (path === '/' ? `/${lang}` : `/${lang}${path}`);
 

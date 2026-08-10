@@ -1,26 +1,36 @@
 import styles from './page.module.css';
+import { getDictionary } from '@/i18n/dictionaries';
 
-export const metadata = { title: 'Privacy Policy | Polentoteca Chalet Gabriele' };
+export async function generateMetadata({ params }) {
+  const lang = (await params)?.lang || 'it';
+  const dict = await getDictionary(lang);
+  return {
+    title: `${dict.privacy.title} | Polentoteca Chalet Gabriele`,
+    description: dict.privacy.lead,
+  };
+}
 
-export default function Page() {
+export default async function Page({ params }) {
+  const lang = (await params)?.lang || 'it';
+  const dict = await getDictionary(lang);
+
   return (
     <section className={styles.page}>
       <div className="container">
         <div className={styles.hero}>
-          <p className="eyebrow">Privacy Policy</p>
-          <h1 className={styles.title}>Privacy Policy</h1>
-          <p className={styles.lead}>Pagina tecnica pronta a ospitare il testo completo dell’informativa privacy del sito.</p>
+          <p className="eyebrow">{dict.privacy.eyebrow}</p>
+          <h1 className={styles.title}>{dict.privacy.title}</h1>
+          <p className={styles.lead}>{dict.privacy.lead}</p>
         </div>
         <div className={styles.layout}>
           <article className={styles.mainCard}>
-            <h2>Sezione pronta da sviluppare</h2>
-            <p>La struttura è semplice e leggibile, così puoi inserirvi facilmente contenuti legali anche molto lunghi.</p>
-            <p>Anche la pagina tecnica ha ora il suo CSS separato nella cartella dedicata.</p>
+            <h2>{dict.privacy.cardTitle}</h2>
+            <p>{dict.privacy.cardText}</p>
           </article>
           <aside className={styles.sideCard}>
-            <p className="eyebrow">Base CSS dedicata</p>
-            <h3>File separato per questa pagina</h3>
-            <p>Questa cartella include sia <strong>page.js</strong> sia <strong>page.module.css</strong>, così puoi lavorare sezione per sezione.</p>
+            <p className="eyebrow">{dict.privacy.sideEyebrow}</p>
+            <h3>{dict.privacy.sideTitle}</h3>
+            <p>{dict.privacy.sideText}</p>
           </aside>
         </div>
       </div>

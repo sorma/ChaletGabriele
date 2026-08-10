@@ -1,26 +1,36 @@
 import styles from './page.module.css';
+import { getDictionary } from '@/i18n/dictionaries';
 
-export const metadata = { title: 'Webcam | Polentoteca Chalet Gabriele' };
+export async function generateMetadata({ params }) {
+  const lang = (await params)?.lang || 'it';
+  const dict = await getDictionary(lang);
+  return {
+    title: `${dict.webcam.title} | Polentoteca Chalet Gabriele`,
+    description: dict.webcam.lead,
+  };
+}
 
-export default function Page() {
+export default async function Page({ params }) {
+  const lang = (await params)?.lang || 'it';
+  const dict = await getDictionary(lang);
+
   return (
     <section className={styles.page}>
       <div className="container">
         <div className={styles.hero}>
-          <p className="eyebrow">Webcam</p>
-          <h1 className={styles.title}>Webcam</h1>
-          <p className={styles.lead}>Sezione pensata per valorizzare il panorama in tempo reale con un impianto grafico più curato.</p>
+          <p className="eyebrow">{dict.webcam.eyebrow}</p>
+          <h1 className={styles.title}>{dict.webcam.title}</h1>
+          <p className={styles.lead}>{dict.webcam.lead}</p>
         </div>
         <div className={styles.layout}>
           <article className={styles.mainCard}>
-            <h2>Sezione pronta da sviluppare</h2>
-            <p>Qui puoi inserire embed, immagine live, collegamenti esterni o moduli informativi dedicati alla visuale del territorio.</p>
-            <p>Il CSS separato ti permette di trasformare questa pagina in un elemento distintivo del sito.</p>
+            <h2>{dict.webcam.cardTitle}</h2>
+            <p>{dict.webcam.cardText}</p>
           </article>
           <aside className={styles.sideCard}>
-            <p className="eyebrow">Base CSS dedicata</p>
-            <h3>File separato per questa pagina</h3>
-            <p>Questa cartella include sia <strong>page.js</strong> sia <strong>page.module.css</strong>, così puoi lavorare sezione per sezione.</p>
+            <p className="eyebrow">{dict.webcam.sideEyebrow}</p>
+            <h3>{dict.webcam.sideTitle}</h3>
+            <p>{dict.webcam.sideText}</p>
           </aside>
         </div>
       </div>

@@ -201,5 +201,51 @@
       "para": "Le prenotazioni si effettuano esclusivamente per telefono. Per fondute, carbonade e menu fissi è obbligatoria la prenotazione anticipata. I tavoli con vista sul lago vengono assegnati in ordine di prenotazione.",
       "btnGhost": "Vedi il menu →"
     }
+  },
+  "news": {
+    "eyebrow": "News & Aggiornamenti",
+    "title": "Resta aggiornato",
+    "lead": "Qui trovi eventi stagionali, serate speciali e tutte le novità dello Chalet Gabriele. Torna a trovarci presto.",
+    "emptyTitle": "Presto qui le prime novità",
+    "emptyText": "Questa sezione è pronta ad accogliere articoli, aggiornamenti ed eventi. Nel frattempo puoi contattarci direttamente per qualsiasi informazione.",
+    "emptyBtn": "Contattaci",
+    "sideWhereEyebrow": "Dove siamo",
+    "sideWhereTitle": "Vieni a trovarci",
+    "sideWhereText": "Polentoteca Chalet Gabriele — aperto nei fine settimana e nei giorni festivi.",
+    "sideWhereLink": "Indicazioni & orari",
+    "sideBookEyebrow": "Prenota",
+    "sideBookTitle": "Riserva il tuo tavolo",
+    "sideBookText": "Per gruppi o serate speciali ti consigliamo di prenotare in anticipo. Chiamaci o scrivici: siamo sempre disponibili.",
+    "sideBookLink": "Prenota ora"
+  },
+  "webcam": {
+    "eyebrow": "Webcam",
+    "title": "Webcam",
+    "lead": "Vista panoramica in tempo reale sul Lago di Como e sulle Alpi dalla terrazza dello Chalet Gabriele.",
+    "cardTitle": "Sezione in arrivo",
+    "cardText": "Stiamo lavorando per portarvi la vista dal vivo. Torna presto.",
+    "sideEyebrow": "Base pronta",
+    "sideTitle": "Pagina dedicata",
+    "sideText": "Questa pagina avrà presto una webcam live con vista sul panorama."
+  },
+  "privacy": {
+    "eyebrow": "Privacy Policy",
+    "title": "Privacy Policy",
+    "lead": "Informativa sul trattamento dei dati personali ai sensi del Regolamento UE 2016/679 (GDPR).",
+    "cardTitle": "Informativa in preparazione",
+    "cardText": "Il testo completo della privacy policy sarà disponibile a breve.",
+    "sideEyebrow": "Documento legale",
+    "sideTitle": "Informativa Privacy",
+    "sideText": "Ai sensi dell'art. 13 GDPR."
+  },
+  "termini": {
+    "eyebrow": "Termini e Condizioni",
+    "title": "Termini e Condizioni",
+    "lead": "Condizioni d'uso del sito e policy di prenotazione della Polentoteca Chalet Gabriele.",
+    "cardTitle": "Documento in preparazione",
+    "cardText": "Le condizioni d'uso complete saranno disponibili a breve.",
+    "sideEyebrow": "Documento legale",
+    "sideTitle": "Termini d'uso",
+    "sideText": "Validi per l'utilizzo del sito e per le prenotazioni."
   }
 }

@@ -132,6 +132,10 @@
       "title": "Come and visit us",
       "para": "For group bookings, set menus, and fondues, contact us directly by phone. Tables with lake views are assigned in order of booking.",
       "btnGhost": "Contact us →"
+    },
+    "unavailable": {
+      "title": "Menu temporarily unavailable",
+      "text": "For current dishes, prices and allergens, please call:"
     }
   },
   "contact": {
@@ -203,49 +207,83 @@
     }
   },
   "news": {
-    "eyebrow": "News & Updates",
-    "title": "Stay updated",
-    "lead": "Here you'll find seasonal events, special evenings and all the latest from Chalet Gabriele. Come back soon.",
-    "emptyTitle": "Coming soon",
-    "emptyText": "This section is ready to host articles, updates and events. In the meantime, feel free to contact us directly for any information.",
-    "emptyBtn": "Contact us",
-    "sideWhereEyebrow": "Where we are",
-    "sideWhereTitle": "Come and visit us",
-    "sideWhereText": "Polentoteca Chalet Gabriele — open weekends and public holidays.",
-    "sideWhereLink": "Directions & hours",
-    "sideBookEyebrow": "Book",
-    "sideBookTitle": "Reserve your table",
-    "sideBookText": "For groups or special evenings we recommend booking in advance. Call or write to us: we are always available.",
-    "sideBookLink": "Book now"
+    "title": "News"
   },
   "webcam": {
-    "eyebrow": "Webcam",
-    "title": "Webcam",
-    "lead": "Live panoramic view of Lake Como and the Alps from the Chalet Gabriele terrace.",
-    "cardTitle": "Coming soon",
-    "cardText": "We're working on bringing you the live view. Check back soon.",
-    "sideEyebrow": "Ready",
-    "sideTitle": "Dedicated page",
-    "sideText": "This page will soon feature a live webcam with a panoramic view."
+    "title": "Webcam"
   },
   "privacy": {
     "eyebrow": "Privacy Policy",
     "title": "Privacy Policy",
     "lead": "Information on the processing of personal data pursuant to EU Regulation 2016/679 (GDPR).",
-    "cardTitle": "Privacy policy coming soon",
-    "cardText": "The full text of the privacy policy will be available shortly.",
-    "sideEyebrow": "Legal document",
-    "sideTitle": "Privacy Notice",
-    "sideText": "Pursuant to Art. 13 GDPR."
+    "sections": [
+      {
+        "title": "Browsing and technical data",
+        "text": "This site presents the restaurant and its menu. It has no contact forms, user accounts or traffic analytics. Hosting provider Cloudflare may process IP addresses, requests and technical data to operate and protect the site."
+      },
+      {
+        "title": "Device storage",
+        "text": "The site uses sessionStorage to remember during the session whether the introductory animation has been shown. This value is not sent to the server. Fonts are served by this site."
+      },
+      {
+        "title": "Google map",
+        "text": "The map does not load automatically. Loading it enables Google services, which may process your IP address and cookies under their own privacy notice. The choice applies to the open page; closing the map stops the embedded content but does not delete data already received by Google."
+      },
+      {
+        "title": "Telephone contact",
+        "text": "Bookings take place by telephone, outside this site. The controller must complete the notice for handling enquiries and bookings."
+      },
+      {
+        "title": "Your rights",
+        "text": "Where applicable under the GDPR, you may request access, rectification, erasure, restriction, portability or object to processing and lodge a complaint with the Italian data protection authority."
+      }
+    ]
   },
   "termini": {
     "eyebrow": "Terms & Conditions",
     "title": "Terms & Conditions",
     "lead": "Terms of use and booking policy of Polentoteca Chalet Gabriele.",
-    "cardTitle": "Document coming soon",
-    "cardText": "The full terms of use will be available shortly.",
-    "sideEyebrow": "Legal document",
-    "sideTitle": "Terms of use",
-    "sideText": "Applicable to the use of this website and for bookings."
+    "sections": [
+      {
+        "title": "Using the site",
+        "text": "This site provides information about Polentoteca Chalet Gabriele and its menu. It does not accept online purchases or bookings."
+      },
+      {
+        "title": "Bookings",
+        "text": "Contact the restaurant on +39 031 963624 for availability and booking confirmation. Conditions for groups, cancellations and special services must be agreed directly with the restaurant."
+      },
+      {
+        "title": "Menu and information",
+        "text": "Dishes, availability, prices and opening hours may change. Confirm details with the restaurant before booking or ordering, particularly if you have allergies or intolerances."
+      },
+      {
+        "title": "External services",
+        "text": "External links and the Google map lead to services governed by their respective providers? terms."
+      }
+    ]
+  },
+  "map": {
+    "title": "Map and directions",
+    "notice": "Google provides this map. Loading it connects to Google services, which may receive your IP address and use cookies. You can read their privacy notice before continuing.",
+    "load": "Load Google map",
+    "close": "Close map",
+    "external": "Open directions in Google Maps",
+    "privacy": "Google privacy"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "information": "Information",
+    "rights": "All rights reserved."
+  },
+  "legal": {
+    "draft": "Draft: business information must be completed and confirmed before publication.",
+    "pending": "To be confirmed by the controller",
+    "owner": "Controller",
+    "address": "Address",
+    "email": "Privacy contact",
+    "vat": "VAT number",
+    "retention": "Data retention",
+    "basis": "Legal basis",
+    "transfers": "International transfers"
   }
 }

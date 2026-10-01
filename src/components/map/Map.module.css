@@ -1,0 +1,5 @@
+.container { min-height: 360px; height: 100%; display: flex; flex-direction: column; background: var(--color-surface); }
+.frame { width: 100%; min-height: 320px; flex: 1; border: 0; }
+.prompt { margin: auto; padding: 2rem; text-align: center; max-width: 50ch; }
+.container button { padding: 0.8rem 1.2rem; border: 1px solid var(--color-accent); border-radius: 12px; cursor: pointer; font: inherit; background: var(--color-bg); color: var(--color-text); }
+.prompt a { display: block; text-decoration: underline; margin-top: 1rem; }

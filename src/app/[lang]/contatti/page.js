@@ -1,8 +1,14 @@
 import Link from 'next/link';
 import styles from './page.module.css';
 import { getDictionary } from '@/i18n/dictionaries';
+import Map from '@/components/map/Map';
+import { pageMetadata } from '@/lib/site';
 
-export const metadata = { title: 'Contatti | Polentoteca Chalet Gabriele' };
+export async function generateMetadata({ params }) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+  return pageMetadata(lang, '/contatti', dict.contact.hero.eyebrow, dict.contact.hero.lead);
+}
 
 const giorniApertura = [
   { giornoKey: 'Lunedì',    stato: 'solo-pranzo' },
@@ -20,7 +26,7 @@ export default async function Page({ params }) {
   const localizeUrl = (path) => (path === '/' ? `/${lang}` : `/${lang}${path}`);
 
   return (
-    <main className={styles.page}>
+    <div className={styles.page}>
 
       {/* ── HERO ── */}
       <section className={styles.heroSection}>
@@ -105,14 +111,7 @@ export default async function Page({ params }) {
             </div>
 
             <div className={styles.mapWrapper}>
-              <iframe
-                src="https://maps.google.com/maps?q=Polentoteca+Chalet+Gabriele+Piano+Rancio+Bellagio&output=embed&z=14"
-                className={styles.mapFrame}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Mappa Polentoteca Chalet Gabriele"
-              />
+              <Map labels={dict.map} />
             </div>
 
           </div>
@@ -152,6 +151,6 @@ export default async function Page({ params }) {
         </div>
       </section>
 
-    </main>
+    </div>
   );
 }

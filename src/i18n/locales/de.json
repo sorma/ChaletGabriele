@@ -132,6 +132,10 @@
       "title": "Kommen Sie uns besuchen",
       "para": "Für Gruppenbuchungen, feste Menüs und Fondues kontaktieren Sie uns direkt telefonisch. Tische mit Seeblick werden in der Reihenfolge der Buchung vergeben.",
       "btnGhost": "Kontaktieren Sie uns →"
+    },
+    "unavailable": {
+      "title": "Speisekarte vor?bergehend nicht verf?gbar",
+      "text": "F?r aktuelle Gerichte, Preise und Allergene rufen Sie uns an:"
     }
   },
   "contact": {
@@ -203,49 +207,83 @@
     }
   },
   "news": {
-    "eyebrow": "News & Aktuelles",
-    "title": "Bleiben Sie informiert",
-    "lead": "Hier finden Sie saisonale Veranstaltungen, besondere Abende und alle Neuigkeiten aus dem Chalet Gabriele. Besuchen Sie uns bald wieder.",
-    "emptyTitle": "Demnächst",
-    "emptyText": "Dieser Bereich ist bereit, Artikel, Aktualisierungen und Veranstaltungen zu hosten. Wenden Sie sich in der Zwischenzeit direkt an uns.",
-    "emptyBtn": "Kontaktieren Sie uns",
-    "sideWhereEyebrow": "Wo wir sind",
-    "sideWhereTitle": "Kommen Sie uns besuchen",
-    "sideWhereText": "Polentoteca Chalet Gabriele — geöffnet an Wochenenden und Feiertagen.",
-    "sideWhereLink": "Wegbeschreibung & Zeiten",
-    "sideBookEyebrow": "Reservieren",
-    "sideBookTitle": "Reservieren Sie Ihren Tisch",
-    "sideBookText": "Für Gruppen oder besondere Abende empfehlen wir eine Vorabreservierung. Rufen Sie uns an oder schreiben Sie uns: Wir sind immer verfügbar.",
-    "sideBookLink": "Jetzt buchen"
+    "title": "News"
   },
   "webcam": {
-    "eyebrow": "Webcam",
-    "title": "Webcam",
-    "lead": "Live-Panoramablick auf den Comer See und die Alpen von der Terrasse des Chalet Gabriele.",
-    "cardTitle": "Demnächst",
-    "cardText": "Wir arbeiten daran, Ihnen die Live-Ansicht zu bringen. Schauen Sie bald wieder vorbei.",
-    "sideEyebrow": "Bereit",
-    "sideTitle": "Eigene Seite",
-    "sideText": "Diese Seite wird bald eine Live-Webcam mit Panoramablick haben."
+    "title": "Webcam"
   },
   "privacy": {
     "eyebrow": "Datenschutzerklärung",
     "title": "Datenschutzerklärung",
     "lead": "Informationen zur Verarbeitung personenbezogener Daten gemäß EU-Verordnung 2016/679 (DSGVO).",
-    "cardTitle": "Datenschutzerklärung in Vorbereitung",
-    "cardText": "Der vollständige Text der Datenschutzerklärung wird in Kürze verfügbar sein.",
-    "sideEyebrow": "Rechtliches Dokument",
-    "sideTitle": "Datenschutzhinweis",
-    "sideText": "Gemäß Art. 13 DSGVO."
+    "sections": [
+      {
+        "title": "Besuch und technische Daten",
+        "text": "Die Website stellt das Restaurant und die Speisekarte vor. Sie enth?lt keine Kontaktformulare, Benutzerkonten oder Verkehrsanalysen. Cloudflare kann IP-Adressen, Anfragen und technische Daten f?r Betrieb und Sicherheit verarbeiten."
+      },
+      {
+        "title": "Speicherung auf dem Ger?t",
+        "text": "sessionStorage merkt sich w?hrend der Sitzung, ob die Einf?hrung angezeigt wurde. Dieser Wert wird nicht an den Server gesendet. Schriftarten werden von dieser Website bereitgestellt."
+      },
+      {
+        "title": "Google-Karte",
+        "text": "Die Karte wird nicht automatisch geladen. Durch Laden wird Google aktiviert; IP-Adresse und Cookies k?nnen nach dessen Datenschutzhinweisen verarbeitet werden. Die Auswahl gilt f?r die ge?ffnete Seite. Das Schlie?en l?scht keine bereits an Google ?bermittelten Daten."
+      },
+      {
+        "title": "Telefonkontakt",
+        "text": "Reservierungen erfolgen telefonisch au?erhalb dieser Website. Der Verantwortliche muss die Informationen zur Bearbeitung von Anfragen und Reservierungen erg?nzen."
+      },
+      {
+        "title": "Ihre Rechte",
+        "text": "Soweit nach der DSGVO anwendbar, k?nnen Sie Auskunft, Berichtigung, L?schung, Einschr?nkung und Daten?bertragbarkeit verlangen, widersprechen und Beschwerde bei der italienischen Datenschutzbeh?rde einlegen."
+      }
+    ]
   },
   "termini": {
     "eyebrow": "Allgemeine Geschäftsbedingungen",
     "title": "Allgemeine Geschäftsbedingungen",
     "lead": "Nutzungsbedingungen der Website und Buchungsrichtlinien der Polentoteca Chalet Gabriele.",
-    "cardTitle": "Dokument in Vorbereitung",
-    "cardText": "Die vollständigen Nutzungsbedingungen werden in Kürze verfügbar sein.",
-    "sideEyebrow": "Rechtliches Dokument",
-    "sideTitle": "Nutzungsbedingungen",
-    "sideText": "Gilt für die Nutzung dieser Website und für Buchungen."
+    "sections": [
+      {
+        "title": "Nutzung der Website",
+        "text": "Die Website informiert ?ber Polentoteca Chalet Gabriele und die Speisekarte. Online-K?ufe und Reservierungen sind nicht m?glich."
+      },
+      {
+        "title": "Reservierungen",
+        "text": "F?r Verf?gbarkeit und Best?tigung rufen Sie +39 031 963624 an. Bedingungen f?r Gruppen, Stornierungen und besondere Leistungen sind direkt mit dem Restaurant zu vereinbaren."
+      },
+      {
+        "title": "Speisekarte und Angaben",
+        "text": "Gerichte, Verf?gbarkeit, Preise und ?ffnungszeiten k?nnen sich ?ndern. Best?tigen Sie Angaben vor Reservierung oder Bestellung, insbesondere bei Allergien oder Unvertr?glichkeiten."
+      },
+      {
+        "title": "Externe Dienste",
+        "text": "Externe Links und die Google-Karte f?hren zu Diensten mit den Bedingungen ihrer jeweiligen Anbieter."
+      }
+    ]
+  },
+  "map": {
+    "title": "Karte und Anfahrt",
+    "notice": "Diese Karte wird von Google bereitgestellt. Beim Laden wird eine Verbindung zu Google hergestellt; dabei k?nnen Ihre IP-Adresse ?bermittelt und Cookies verwendet werden. Lesen Sie zuvor die Datenschutzhinweise.",
+    "load": "Google-Karte laden",
+    "close": "Karte schlie?en",
+    "external": "Anfahrt in Google Maps ?ffnen",
+    "privacy": "Google-Datenschutz"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "information": "Informationen",
+    "rights": "Alle Rechte vorbehalten."
+  },
+  "legal": {
+    "draft": "Entwurf: Unternehmensangaben m?ssen vor Ver?ffentlichung erg?nzt und best?tigt werden.",
+    "pending": "Vom Verantwortlichen zu best?tigen",
+    "owner": "Verantwortlicher",
+    "address": "Anschrift",
+    "email": "Datenschutzkontakt",
+    "vat": "Umsatzsteuer-ID",
+    "retention": "Speicherdauer",
+    "basis": "Rechtsgrundlage",
+    "transfers": "Internationale ?bermittlungen"
   }
 }

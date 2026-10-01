@@ -3,3 +3,10 @@
 .open-next/
 node_modules/
 .dev.vars
+.dev.vars.*
+.env*
+!.env.example
+coverage/
+playwright-report/
+test-results/
+*-backup.sql

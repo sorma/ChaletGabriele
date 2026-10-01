@@ -1,6 +1,14 @@
 import { getDictionary } from '@/i18n/dictionaries';
 import styles from './page.module.css';
 import Link from 'next/link';
+import Image from 'next/image';
+import { pageMetadata } from '@/lib/site';
+
+export async function generateMetadata({ params }) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+  return pageMetadata(lang, '', 'Polentoteca Chalet Gabriele', dict.home.hero.text);
+}
 
 export default async function HomePage({ params }) {
   const lang = (await params)?.lang || 'it';
@@ -14,13 +22,14 @@ export default async function HomePage({ params }) {
       <section className={styles.heroSection}>
         <div className={styles.heroShell}>
           <div className={styles.heroBackground}>
-            <img
+            <Image
               src="/images/hero.webp"
               alt="Vista panoramica sul lago di Como"
               className={styles.heroImage}
-              width="4992"
-              height="3328"
-              loading="eager"
+              width={800}
+              height={600}
+              preload
+              sizes="100vw"
             />
             <div className={styles.heroOverlay} />
           </div>
@@ -57,13 +66,14 @@ export default async function HomePage({ params }) {
             <Link href={localizeUrl("/chi-siamo")} className={styles.btnOutline}>{dict.home.intro.btn}</Link>
           </div>
           <div className={styles.introImage}>
-            <img
+            <Image
               src="/images/luogoAutentico.webp"
               alt="Chalet di montagna al tramonto"
-              width="1470"
-              height="980"
+              width={550}
+              height={413}
               loading="lazy"
               className={styles.introImg}
+              sizes="(max-width: 900px) 100vw, 50vw"
             />
           </div>
         </div>
@@ -73,13 +83,14 @@ export default async function HomePage({ params }) {
       <section className={styles.signature}>
         <div className={`container ${styles.signatureGrid}`}>
           <div className={styles.signatureImage}>
-            <img
+            <Image
               src="/images/polenta.webp"
               alt="Polenta con ragù della tradizione"
-              width="1024"
-              height="683"
+              width={2000}
+              height={1500}
               loading="lazy"
               className={styles.signatureImg}
+              sizes="(max-width: 900px) 100vw, 50vw"
             />
           </div>
           <div className={styles.signatureText}>
@@ -124,13 +135,14 @@ export default async function HomePage({ params }) {
       {/* ── VISTA PANORAMICA ── */}
       <section className={styles.panorama}>
         <div className={styles.panoramaShell}>
-          <img
+          <Image
             src="/images/vista.webp"
             alt="Terrazza con vista sul lago di Como"
-            width="4417"
-            height="2945"
+            width={3000}
+            height={1688}
             loading="lazy"
             className={styles.panoramaBg}
+            sizes="100vw"
           />
           <div className={styles.panoramaOverlay} />
           <div className={styles.panoramaContent}>

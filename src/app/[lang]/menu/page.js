@@ -4,10 +4,16 @@
 import Link from 'next/link';
 import styles from './page.module.css';
 import { MenuAlaCartaClient, MenuSelfClient } from './MenuClient';
-import { getCloudflareContext } from '@opennextjs/cloudflare';
-import { getMenuFromDB } from '@/lib/db-menu';
+import { getMenu as loadMenu } from '@/lib/menu';
+import { pageMetadata } from '@/lib/site';
 import { getDictionary } from '@/i18n/dictionaries';
 export const dynamic = 'force-dynamic';
+
+export async function generateMetadata({ params }) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+  return pageMetadata(lang, '/menu', dict.menu.opening.eyebrow, dict.menu.opening.lead);
+}
 
 /**
  * Carica il menu direttamente dal binding D1.
@@ -16,23 +22,22 @@ export const dynamic = 'force-dynamic';
  */
 async function getMenu(lang = 'it') {
   try {
-    const { env } = await getCloudflareContext({ async: true });
-    return await getMenuFromDB(env.DB, lang);
+    return await loadMenu(lang);
   } catch (err) {
     console.error('[menu/page] Impossibile caricare il menu dal DB:', err);
     // Ritorna strutture vuote: la pagina si renderizza senza errori
-    return { alacarta: [], self: [], fissi: [] };
+    return { alacarta: [], self: [], fissi: [], unavailable: true };
   }
 }
 
 export default async function Page({ params }) {
   const lang = (await params)?.lang || 'it';
-  const { alacarta, self: selfCategorie, fissi: menuFissi } = await getMenu(lang);
   const dict = await getDictionary(lang);
+  const { alacarta, self: selfCategorie, fissi: menuFissi, unavailable } = await getMenu(lang);
   const localizeUrl = (path) => (path === '/' ? `/${lang}` : `/${lang}${path}`);
 
   return (
-    <main className={styles.page}>
+    <div className={styles.page}>
 
       <section className={styles.opening}>
         <div className={`container ${styles.openingInner}`}>
@@ -48,6 +53,12 @@ export default async function Page({ params }) {
         </div>
       </section>
 
+      {unavailable && <div className="container" role="status">
+        <h2>{dict.menu.unavailable.title}</h2>
+        <p>{dict.menu.unavailable.text} <a href="tel:+39031963624">031 963624</a></p>
+      </div>}
+
+      {!unavailable && <>
       <section className={styles.alaCartaSection}>
         <div className="container">
           <p className={styles.eyebrow}>{dict.menu.alacarta.eyebrow}</p>
@@ -67,7 +78,7 @@ export default async function Page({ params }) {
           </p>
           <div className={styles.fissiGrid}>
             {menuFissi.map((menu) => (
-              <div key={menu.nome} className={styles.menuCard}>
+              <div key={menu.id} className={styles.menuCard}>
                 <div className={styles.menuCardTop}>
                   <h3 className={styles.menuCardNome}>{menu.nome}</h3>
                   <p className={styles.menuCardPrezzo}>{menu.prezzo}</p>
@@ -109,6 +120,8 @@ export default async function Page({ params }) {
         </div>
       </section>
 
+      </>}
+
       <section className={styles.cta}>
         <div className={`container ${styles.ctaInner}`}>
           <div className={styles.ctaText}>
@@ -125,6 +138,6 @@ export default async function Page({ params }) {
         </div>
       </section>
 
-    </main>
+    </div>
   );
 }

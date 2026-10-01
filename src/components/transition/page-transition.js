@@ -4,37 +4,36 @@ import { useEffect, useState } from 'react';
 import styles from './page-transition.module.css';
 
 export default function PageTransition() {
-  const [show, setShow] = useState(false);
-  const [leaving, setLeaving] = useState(false);
-  const [gone, setGone] = useState(false);
+  const [phase, setPhase] = useState('hidden');
 
   useEffect(() => {
-    const already = sessionStorage.getItem('intro-shown');
-    if (already) {
-      setGone(true);
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    try {
+      if (sessionStorage.getItem('intro-shown')) return;
+    } catch {
+      // If storage is disabled, skip the optional introduction.
       return;
     }
-
-    setShow(true);
-
-    const t1 = setTimeout(() => setLeaving(true), 900);
+    const start = requestAnimationFrame(() => setPhase('visible'));
+    const t1 = setTimeout(() => setPhase('leaving'), 900);
     const t2 = setTimeout(() => {
-      setGone(true);
-      sessionStorage.setItem('intro-shown', '1');
+      setPhase('hidden');
+      try { sessionStorage.setItem('intro-shown', '1'); } catch { /* optional storage */ }
     }, 2100);
 
     return () => {
+      cancelAnimationFrame(start);
       clearTimeout(t1);
       clearTimeout(t2);
     };
   }, []);
 
-  if (!show || gone) return null;
+  if (phase === 'hidden') return null;
 
   return (
     <div
       className={styles.curtain}
-      data-leaving={leaving ? 'true' : undefined}
+      data-leaving={phase === 'leaving' ? 'true' : undefined}
       aria-hidden="true"
     >
       <span className={styles.brand}>Chalet Gabriele</span>

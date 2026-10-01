@@ -1,0 +1,16 @@
+{
+  "url": "",
+  "business": {
+    "legalName": "",
+    "address": "",
+    "privacyEmail": "",
+    "vatId": ""
+  },
+  "privacy": {
+    "retention": "",
+    "legalBasis": "",
+    "internationalTransfers": "",
+    "approved": false
+  },
+  "termsApproved": false
+}

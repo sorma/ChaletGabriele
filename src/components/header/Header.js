@@ -1,14 +1,11 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
 import Nav from '@/components/nav/Nav';
 import LanguageSelector from '@/components/language-selector/LanguageSelector';
 import styles from './Header.module.css';
 
 export default function Header({ dict, lang }) {
-  const [showPhone, setShowPhone] = useState(false);
-
   return (
     <header className={styles.siteHeader}>
       <div className={styles.headerInner}>

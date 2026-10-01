@@ -16,6 +16,7 @@ function TabNav({ tabs, activeId, onSelect }) {
             type="button"
             className={`${styles.tabBtn} ${activeId === tab.id ? styles.tabBtnActive : ''}`}
             onClick={() => onSelect(tab.id)}
+            aria-pressed={activeId === tab.id}
           >
             {tab.label}
           </button>
@@ -51,7 +52,8 @@ function PiattoRow({ nome, prezzo, prezziMultipli, desc, note, special }) {
    ───────────────────────────────────────────── */
 function MenuSlider({ tabs, defaultId }) {
   const [activeId, setActiveId] = useState(defaultId);
-  const tab = tabs.find((t) => t.id === activeId);
+  const tab = tabs.find((t) => t.id === activeId) ?? tabs[0];
+  if (!tab) return null;
   return (
     <div className={styles.menuBox}>
       <TabNav tabs={tabs} activeId={activeId} onSelect={setActiveId} />

@@ -1,14 +1,20 @@
 import styles from './page.module.css';
 import { getDictionary } from '@/i18n/dictionaries';
+import Image from 'next/image';
+import { pageMetadata } from '@/lib/site';
 
-export const metadata = { title: 'Chi siamo | Polentoteca Chalet Gabriele' };
+export async function generateMetadata({ params }) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+  return pageMetadata(lang, '/chi-siamo', dict.nav.chiSiamo, dict.about.opening.lead);
+}
 
 export default async function Page({ params }) {
   const lang = (await params)?.lang || 'it';
   const dict = await getDictionary(lang);
 
   return (
-    <main className={styles.page}>
+    <div className={styles.page}>
 
       {/* ── APERTURA EDITORIALE ── */}
       <section className={styles.opening}>
@@ -26,13 +32,14 @@ export default async function Page({ params }) {
         <div className={`container ${styles.storyGrid}`}>
 
           <div className={styles.storyImage}>
-            <img
+            <Image
               src="/images/fondatori.webp"
               alt="Nuccia e Gabriele, fondatori dello chalet negli anni '60"
-              width="900"
-              height="600"
+              width={300}
+              height={170}
               loading="lazy"
               className={styles.storyImg}
+              sizes="(max-width: 900px) 100vw, 50vw"
             />
             <div className={styles.storyImageCaption}>
               {dict.about.story.caption}
@@ -91,13 +98,14 @@ export default async function Page({ params }) {
           </div>
 
         <div className={styles.tocImageWrap}>
-          <img
+          <Image
             src="/images/toc.webp"
             alt="Il Tóc nel paiolo di rame, piatto tipico bellagino"
-            width="900"
-            height="600"
+            width={1030}
+            height={743}
             loading="lazy"
             className={styles.tocImg}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
         </div>
         <p className={styles.tocNote}>
@@ -157,18 +165,19 @@ export default async function Page({ params }) {
             </p>
           </div>
           <div className={styles.closingImage}>
-            <img
+            <Image
               src="/images/vistaTerrazza.webp"
               alt="Chalet Gabriele visto dall'esterno"
-              width="1024"
-              height="683"
+              width={1280}
+              height={720}
               loading="lazy"
               className={styles.closingImg}
+              sizes="(max-width: 900px) 100vw, 50vw"
             />
           </div>
         </div>
       </section>
 
-    </main>
+    </div>
   );
 }

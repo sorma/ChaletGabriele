@@ -1,0 +1,8 @@
+.page { padding-block: clamp(2rem, 6vw, 5rem); max-width: 80ch; }
+.page section { margin-top: 2rem; }
+.page a { text-decoration: underline; }
+.draft { padding: 1rem; border: 1px solid var(--color-accent); border-radius: 12px; }
+.details { overflow-wrap: anywhere; }
+.details > div { margin-block: 1rem; }
+.details dt { font-weight: 700; }
+.details dd { margin: 0; }

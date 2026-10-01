@@ -6,8 +6,6 @@ export default function Nav({ dict, lang = 'it' }) {
     { href: '/', labelKey: 'home' },
     { href: '/chi-siamo', labelKey: 'chiSiamo' },
     { href: '/menu', labelKey: 'menu' },
-    { href: '/webcam', labelKey: 'webcam' },
-    { href: '/news', labelKey: 'news' },
     { href: '/contatti', labelKey: 'contatti' }
   ];
 

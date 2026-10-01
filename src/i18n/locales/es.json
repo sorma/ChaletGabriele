@@ -132,6 +132,10 @@
       "title": "Ven a visitarnos",
       "para": "Para reservas de grupos, menús fijos y fondues, contáctenos directamente por teléfono. Las mesas con vistas al lago se asignan por orden de reserva.",
       "btnGhost": "Contáctanos →"
+    },
+    "unavailable": {
+      "title": "Men? temporalmente no disponible",
+      "text": "Para platos, precios y al?rgenos actualizados, ll?manos:"
     }
   },
   "contact": {
@@ -203,49 +207,83 @@
     }
   },
   "news": {
-    "eyebrow": "Noticias & Actualizaciones",
-    "title": "Manéntete informado",
-    "lead": "Aquí encontrarás eventos de temporada, noches especiales y todas las novedades del Chalet Gabriele. Vuelve pronto.",
-    "emptyTitle": "Próximamente",
-    "emptyText": "Esta sección está lista para publicar artículos, actualizaciones y eventos. Mientras tanto, puédes contactarnos directamente.",
-    "emptyBtn": "Contáctanos",
-    "sideWhereEyebrow": "Dónde estamos",
-    "sideWhereTitle": "Ven a visitarnos",
-    "sideWhereText": "Polentoteca Chalet Gabriele — abierto los fines de semana y festivos.",
-    "sideWhereLink": "Indicaciones & horarios",
-    "sideBookEyebrow": "Reservar",
-    "sideBookTitle": "Reserva tu mesa",
-    "sideBookText": "Para grupos o noches especiales recomendamos reservar con antelación. Llámanos o escríbenos: estamos siempre disponibles.",
-    "sideBookLink": "Reservar ahora"
+    "title": "News"
   },
   "webcam": {
-    "eyebrow": "Webcam",
-    "title": "Webcam",
-    "lead": "Vista panorámica en tiempo real del Lago de Como y los Alpes desde la terraza del Chalet Gabriele.",
-    "cardTitle": "Próximamente",
-    "cardText": "Estamos trabajando para traerle la vista en directo. Vuelva pronto.",
-    "sideEyebrow": "Listo",
-    "sideTitle": "Página dedicada",
-    "sideText": "Esta página pronto tendrá una webcam en directo con vista panorámica."
+    "title": "Webcam"
   },
   "privacy": {
     "eyebrow": "Política de Privacidad",
     "title": "Política de Privacidad",
     "lead": "Información sobre el tratamiento de datos personales conforme al Reglamento UE 2016/679 (RGPD).",
-    "cardTitle": "Política de privacidad en preparación",
-    "cardText": "El texto completo de la política de privacidad estará disponible en breve.",
-    "sideEyebrow": "Documento legal",
-    "sideTitle": "Aviso de privacidad",
-    "sideText": "Conforme al art. 13 RGPD."
+    "sections": [
+      {
+        "title": "Navegaci?n y datos t?cnicos",
+        "text": "El sitio presenta el restaurante y su men?. No contiene formularios de contacto, cuentas ni an?lisis de tr?fico. Cloudflare puede tratar direcciones IP, solicitudes y datos t?cnicos para prestar y proteger el servicio."
+      },
+      {
+        "title": "Almacenamiento en el dispositivo",
+        "text": "El sitio utiliza sessionStorage durante la sesi?n para recordar si se ha mostrado la animaci?n inicial. El dato no se env?a al servidor. Las fuentes se sirven desde este sitio."
+      },
+      {
+        "title": "Mapa de Google",
+        "text": "El mapa no se carga autom?ticamente. Al cargarlo se activa Google, que puede tratar la direcci?n IP y cookies seg?n su pol?tica de privacidad. La elecci?n se aplica a la p?gina abierta; cerrar el mapa no elimina los datos ya recibidos por Google."
+      },
+      {
+        "title": "Contacto telef?nico",
+        "text": "Las reservas se realizan por tel?fono, fuera del sitio. El responsable debe completar la informaci?n sobre la gesti?n de consultas y reservas."
+      },
+      {
+        "title": "Derechos",
+        "text": "Cuando proceda seg?n el RGPD, puedes solicitar acceso, rectificaci?n, supresi?n, limitaci?n, portabilidad u oposici?n y presentar una reclamaci?n ante la autoridad italiana de protecci?n de datos."
+      }
+    ]
   },
   "termini": {
     "eyebrow": "Términos y Condiciones",
     "title": "Términos y Condiciones",
     "lead": "Condiciones de uso del sitio y política de reservas de la Polentoteca Chalet Gabriele.",
-    "cardTitle": "Documento en preparación",
-    "cardText": "Las condiciones de uso completas estarán disponibles en breve.",
-    "sideEyebrow": "Documento legal",
-    "sideTitle": "Términos de uso",
-    "sideText": "Aplicables al uso de este sitio web y para reservas."
+    "sections": [
+      {
+        "title": "Uso del sitio",
+        "text": "El sitio informa sobre Polentoteca Chalet Gabriele y su men?. No permite compras ni reservas en l?nea."
+      },
+      {
+        "title": "Reservas",
+        "text": "Contacta al restaurante en el +39 031 963624 para disponibilidad y confirmaci?n. Las condiciones para grupos, cancelaciones y servicios especiales deben acordarse directamente."
+      },
+      {
+        "title": "Men? e informaci?n",
+        "text": "Los platos, precios, horarios y disponibilidad pueden cambiar. Confirma los detalles antes de reservar o pedir, especialmente en caso de alergias o intolerancias."
+      },
+      {
+        "title": "Servicios externos",
+        "text": "Los enlaces externos y el mapa de Google conducen a servicios sujetos a las condiciones de sus proveedores."
+      }
+    ]
+  },
+  "map": {
+    "title": "Mapa e indicaciones",
+    "notice": "Google proporciona este mapa. Al cargarlo te conectas a sus servicios, que pueden recibir tu direcci?n IP y utilizar cookies. Puedes leer su pol?tica de privacidad antes de continuar.",
+    "load": "Cargar mapa de Google",
+    "close": "Cerrar mapa",
+    "external": "Abrir indicaciones en Google Maps",
+    "privacy": "Privacidad de Google"
+  },
+  "footer": {
+    "navigation": "Navegaci?n",
+    "information": "Informaci?n",
+    "rights": "Todos los derechos reservados."
+  },
+  "legal": {
+    "draft": "Borrador: los datos de la empresa deben completarse y confirmarse antes de la publicaci?n.",
+    "pending": "Por confirmar con el responsable",
+    "owner": "Responsable",
+    "address": "Direcci?n",
+    "email": "Contacto de privacidad",
+    "vat": "N?mero de IVA",
+    "retention": "Conservaci?n de datos",
+    "basis": "Base jur?dica",
+    "transfers": "Transferencias internacionales"
   }
 }

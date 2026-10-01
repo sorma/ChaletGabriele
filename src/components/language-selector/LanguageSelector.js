@@ -1,94 +1,62 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import styles from './LanguageSelector.module.css';
 
 const languages = [
   { code: 'it', label: 'Italiano', flag: '🇮🇹' },
   { code: 'en', label: 'English', flag: '🇬🇧' },
   { code: 'es', label: 'Español', flag: '🇪🇸' },
-  { code: 'de', label: 'Deutsch', flag: '🇩🇪' }
+  { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
 ];
+const labels = { it: 'Cambia lingua', en: 'Change language', es: 'Cambiar idioma', de: 'Sprache ändern' };
 
 export default function LanguageSelector() {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();
-  const router = useRouter();
+  const pathname = usePathname() || '/it';
+  const selected = languages.find(lang => lang.code === pathname.split('/')[1]) || languages[0];
   const dropdownRef = useRef(null);
-
-  // Initialize selected language from pathname if available, fallback to IT
-  const currentCode = pathname ? pathname.split('/')[1] : 'it';
-  const initialLang = languages.find(l => l.code === currentCode) || languages[0];
-  
-  const [selected, setSelected] = useState(initialLang);
-
-  // Close dropdown when clicking outside
+  const toggleRef = useRef(null);
   useEffect(() => {
-    function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
+    function closeOutside(event) {
+      if (!dropdownRef.current?.contains(event.target)) setIsOpen(false);
     }
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener('pointerdown', closeOutside);
+    return () => document.removeEventListener('pointerdown', closeOutside);
   }, []);
-
-  const toggleOpen = () => setIsOpen(!isOpen);
-  
-  const selectLanguage = (lang) => {
-    setSelected(lang);
-    setIsOpen(false);
-    
-    if (!pathname) return;
+  const hrefFor = code => {
     const segments = pathname.split('/');
-    
-    // Check if the first segment is an existing language code
-    if (languages.some(l => l.code === segments[1])) {
-      segments[1] = lang.code;
-    } else {
-      // If it's not a known code, insert it
-      segments.splice(1, 0, lang.code);
-    }
-    
-    router.push(segments.join('/') || '/');
+    if (languages.some(lang => lang.code === segments[1])) segments[1] = code;
+    else segments.splice(1, 0, code);
+    return segments.join('/');
   };
-
-  return (
-    <div className={styles.langSelector} ref={dropdownRef}>
-      <button 
-        className={styles.langToggle} 
-        onClick={toggleOpen}
-        aria-haspopup="listbox"
-        aria-expanded={isOpen}
-        aria-label="Cambia lingua"
-      >
-        <span className={styles.flag}>{selected.flag}</span>
-        <span className={styles.code}>{selected.label}</span>
-        <span className={styles.arrow}>
-          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </span>
-      </button>
-
-      {isOpen && (
-        <ul className={styles.langMenu} role="listbox">
-          {languages.map((lang) => (
-            <li key={lang.code} role="none">
-              <button 
-                className={`${styles.langOption} ${selected.code === lang.code ? styles.selected : ''}`}
-                onClick={() => selectLanguage(lang)}
-                role="option"
-                aria-selected={selected.code === lang.code}
-              >
-                <span className={styles.flag}>{lang.flag}</span>
-                <span className={styles.label}>{lang.label}</span>
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
+  return <div className={styles.langSelector} ref={dropdownRef} onKeyDown={event => {
+    if (event.key === 'Escape') {
+      setIsOpen(false);
+      toggleRef.current?.focus();
+    }
+  }} onBlur={event => {
+    if (!event.currentTarget.contains(event.relatedTarget)) setIsOpen(false);
+  }}>
+    <button ref={toggleRef} type="button" className={styles.langToggle}
+      onClick={() => setIsOpen(open => !open)} aria-expanded={isOpen}
+      aria-controls="language-options" aria-label={labels[selected.code]}>
+      <span className={styles.flag} aria-hidden="true">{selected.flag}</span>
+      <span className={styles.code}>{selected.label}</span>
+      <span className={styles.arrow} aria-hidden="true">⌄</span>
+    </button>
+    {isOpen && <ul id="language-options" className={styles.langMenu}>
+      {languages.map(lang => <li key={lang.code}>
+        <Link href={hrefFor(lang.code)} hrefLang={lang.code} lang={lang.code}
+          className={`${styles.langOption} ${selected.code === lang.code ? styles.selected : ''}`}
+          aria-current={selected.code === lang.code ? 'true' : undefined}
+          onClick={() => setIsOpen(false)}>
+          <span className={styles.flag} aria-hidden="true">{lang.flag}</span>
+          <span className={styles.label}>{lang.label}</span>
+        </Link>
+      </li>)}
+    </ul>}
+  </div>;
 }

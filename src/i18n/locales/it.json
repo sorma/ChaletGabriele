@@ -132,6 +132,10 @@
       "title": "Vieni a trovarci",
       "para": "Per prenotazioni di gruppo, menu fissi e fondute contattaci direttamente per telefono. I tavoli con vista sul lago vengono assegnati in ordine di prenotazione.",
       "btnGhost": "Contattaci →"
+    },
+    "unavailable": {
+      "title": "Menu temporaneamente non disponibile",
+      "text": "Per conoscere piatti, prezzi e allergeni aggiornati, contattaci:"
     }
   },
   "contact": {
@@ -203,49 +207,83 @@
     }
   },
   "news": {
-    "eyebrow": "News & Aggiornamenti",
-    "title": "Resta aggiornato",
-    "lead": "Qui trovi eventi stagionali, serate speciali e tutte le novità dello Chalet Gabriele. Torna a trovarci presto.",
-    "emptyTitle": "Presto qui le prime novità",
-    "emptyText": "Questa sezione è pronta ad accogliere articoli, aggiornamenti ed eventi. Nel frattempo puoi contattarci direttamente per qualsiasi informazione.",
-    "emptyBtn": "Contattaci",
-    "sideWhereEyebrow": "Dove siamo",
-    "sideWhereTitle": "Vieni a trovarci",
-    "sideWhereText": "Polentoteca Chalet Gabriele — aperto nei fine settimana e nei giorni festivi.",
-    "sideWhereLink": "Indicazioni & orari",
-    "sideBookEyebrow": "Prenota",
-    "sideBookTitle": "Riserva il tuo tavolo",
-    "sideBookText": "Per gruppi o serate speciali ti consigliamo di prenotare in anticipo. Chiamaci o scrivici: siamo sempre disponibili.",
-    "sideBookLink": "Prenota ora"
+    "title": "News"
   },
   "webcam": {
-    "eyebrow": "Webcam",
-    "title": "Webcam",
-    "lead": "Vista panoramica in tempo reale sul Lago di Como e sulle Alpi dalla terrazza dello Chalet Gabriele.",
-    "cardTitle": "Sezione in arrivo",
-    "cardText": "Stiamo lavorando per portarvi la vista dal vivo. Torna presto.",
-    "sideEyebrow": "Base pronta",
-    "sideTitle": "Pagina dedicata",
-    "sideText": "Questa pagina avrà presto una webcam live con vista sul panorama."
+    "title": "Webcam"
   },
   "privacy": {
     "eyebrow": "Privacy Policy",
     "title": "Privacy Policy",
     "lead": "Informativa sul trattamento dei dati personali ai sensi del Regolamento UE 2016/679 (GDPR).",
-    "cardTitle": "Informativa in preparazione",
-    "cardText": "Il testo completo della privacy policy sarà disponibile a breve.",
-    "sideEyebrow": "Documento legale",
-    "sideTitle": "Informativa Privacy",
-    "sideText": "Ai sensi dell'art. 13 GDPR."
+    "sections": [
+      {
+        "title": "Navigazione e dati tecnici",
+        "text": "Il sito presenta il ristorante e il suo menu. Non contiene moduli di contatto, account o strumenti di analisi del traffico. Il servizio di hosting Cloudflare pu? trattare indirizzi IP, richieste e dati tecnici per erogare e proteggere il sito."
+      },
+      {
+        "title": "Memorizzazione sul dispositivo",
+        "text": "Il sito usa sessionStorage per ricordare, durante la sessione, se ? gi? stata mostrata l?animazione iniziale. Questo dato non viene inviato al server. I font sono serviti dal sito."
+      },
+      {
+        "title": "Mappa Google",
+        "text": "La mappa non viene caricata automaticamente. Il pulsante di caricamento attiva il servizio Google, che pu? trattare indirizzo IP e cookie secondo la propria informativa. La scelta vale per la pagina aperta; chiudere la mappa interrompe il contenuto incorporato ma non cancella i dati gi? ricevuti da Google."
+      },
+      {
+        "title": "Contatti telefonici",
+        "text": "Le prenotazioni avvengono per telefono, al di fuori di questo sito. Il titolare deve completare l?informativa relativa alla gestione delle richieste e delle prenotazioni."
+      },
+      {
+        "title": "Diritti",
+        "text": "Nei casi previsti dal GDPR puoi chiedere accesso, rettifica, cancellazione, limitazione, portabilit? o opposizione al trattamento e presentare reclamo al Garante per la protezione dei dati personali."
+      }
+    ]
   },
   "termini": {
     "eyebrow": "Termini e Condizioni",
     "title": "Termini e Condizioni",
     "lead": "Condizioni d'uso del sito e policy di prenotazione della Polentoteca Chalet Gabriele.",
-    "cardTitle": "Documento in preparazione",
-    "cardText": "Le condizioni d'uso complete saranno disponibili a breve.",
-    "sideEyebrow": "Documento legale",
-    "sideTitle": "Termini d'uso",
-    "sideText": "Validi per l'utilizzo del sito e per le prenotazioni."
+    "sections": [
+      {
+        "title": "Utilizzo del sito",
+        "text": "Il sito fornisce informazioni sulla Polentoteca Chalet Gabriele e sul menu. Non permette di acquistare o prenotare online."
+      },
+      {
+        "title": "Prenotazioni",
+        "text": "Per disponibilit? e conferma delle prenotazioni contatta il ristorante al numero 031 963624. Eventuali condizioni per gruppi, cancellazioni e servizi speciali devono essere concordate direttamente con il ristorante."
+      },
+      {
+        "title": "Menu e informazioni",
+        "text": "Piatti, disponibilit?, prezzi e orari possono cambiare. Prima di prenotare o ordinare, chiedi conferma al ristorante, soprattutto in caso di allergie o intolleranze."
+      },
+      {
+        "title": "Servizi esterni",
+        "text": "I collegamenti esterni e la mappa Google conducono a servizi regolati dalle condizioni dei rispettivi fornitori."
+      }
+    ]
+  },
+  "map": {
+    "title": "Mappa e indicazioni",
+    "notice": "La mappa ? fornita da Google. Caricandola consenti la connessione ai suoi servizi, che possono ricevere il tuo indirizzo IP e utilizzare cookie. Puoi consultare la loro informativa prima di procedere.",
+    "load": "Carica la mappa Google",
+    "close": "Chiudi la mappa",
+    "external": "Apri le indicazioni su Google Maps",
+    "privacy": "Privacy di Google"
+  },
+  "footer": {
+    "navigation": "Navigazione",
+    "information": "Informazioni",
+    "rights": "Tutti i diritti riservati."
+  },
+  "legal": {
+    "draft": "Bozza: informazioni aziendali da completare e confermare prima della pubblicazione.",
+    "pending": "Da confermare con il titolare",
+    "owner": "Titolare",
+    "address": "Indirizzo",
+    "email": "Contatto privacy",
+    "vat": "Partita IVA",
+    "retention": "Conservazione dei dati",
+    "basis": "Base giuridica",
+    "transfers": "Trasferimenti internazionali"
   }
 }

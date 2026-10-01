@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
-
 :root {
-  --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body: 'Manrope', Arial, sans-serif;
+  --font-display: 'Cormorant Garamond Variable', Georgia, serif;
+  --font-body: 'Manrope Variable', Arial, sans-serif;
 
   --color-bg:        #f5ede0;
   --color-surface:   #ede4d4;
@@ -42,6 +40,12 @@ main { min-height: 70vh; }
 
 .skipLink { position: absolute; left: -999px; top: 1rem; }
 .skipLink:focus { left: 1rem; z-index: 99; background: var(--color-accent); color: #fff; padding: 0.8rem 1rem; border-radius: 999px; }
+
+:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
 
 .container { width: min(calc(100% - 2rem), var(--container)); margin: 0 auto; }
 

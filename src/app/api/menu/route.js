@@ -1,6 +1,8 @@
-import { getCloudflareContext } from '@opennextjs/cloudflare';
 import { NextResponse } from 'next/server';
-import { getMenuFromDB } from '@/lib/db-menu';
+import { getMenu } from '@/lib/menu';
+import { defaultLocale, isLocale } from '@/i18n/config';
+
+export const dynamic = 'force-dynamic';
 
 /**
  * GET /api/menu?lang=en
@@ -17,17 +19,15 @@ import { getMenuFromDB } from '@/lib/db-menu';
 export async function GET(request) {
   try {
     const { searchParams } = new URL(request.url);
-    const lang = ['it', 'en', 'es', 'de'].includes(searchParams.get('lang'))
-      ? searchParams.get('lang')
-      : 'it';
-    const { env } = await getCloudflareContext({ async: true });
-    const menu = await getMenuFromDB(env.DB, lang);
-    return NextResponse.json(menu);
+    const requestedLang = searchParams.get('lang');
+    const lang = isLocale(requestedLang) ? requestedLang : defaultLocale;
+    const menu = await getMenu(lang);
+    return NextResponse.json(menu, { headers: { 'Cache-Control': 'no-store' } });
   } catch (err) {
     console.error('[/api/menu] Errore:', err);
     return NextResponse.json(
       { error: 'Errore nel caricamento del menu' },
-      { status: 500 }
+      { status: 503, headers: { 'Cache-Control': 'no-store', 'Retry-After': '60' } }
     );
   }
 }
